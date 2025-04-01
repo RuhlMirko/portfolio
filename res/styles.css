@@ -67,7 +67,7 @@ section {
   animation-range: entry 0 cover 30%;
 }
 /*/////////////////////////////////////*/
-/* From Uiverse.io by alexroumi */
+/* From Uiverse.io by alexroumi 
 button {
   padding: 15px 25px;
   border: unset;
@@ -110,9 +110,11 @@ button:hover::before {
 }
 
 img {
-  color: var(--base-color);
+  filter: invert(59%) sepia(19%) saturate(1003%) hue-rotate(186deg)
+    brightness(94%) contrast(100%);
 }
-
+*/
+/*/////////////////////////////////////*/
 h1,
 h2 {
   transition: 0.7s;
@@ -135,7 +137,36 @@ p {
 }
 
 ul {
-  animation: appearLeft linear;
+  animation: appearLeft ease-out;
   animation-timeline: view();
   animation-range: entry 0 cover 30%;
+}
+li {
+  display: flex;
+  gap: 16px;
+  font-size: 1.5rem;
+  margin: 50px;
+}
+li img {
+  width: 40%;
+}
+.info,
+.info a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--high-color);
+}
+.info span {
+  font-style: italic;
+  font-size: 1.1;
+  font-weight: lighter;
+  color: var(--secon-color);
+}
+
+/* Marque (Infinite scroll)
+*/
+#marquee {
+  background-color: var(--high-color);
+  color: var(--base-color);
 }
