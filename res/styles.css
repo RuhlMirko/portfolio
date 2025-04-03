@@ -15,7 +15,11 @@
   --high-color: #191b33;
 }
 body {
-  background-color: var(--base-color);
+  background: linear-gradient(
+    180deg,
+    var(--base-color) 0%,
+    rgb(21, 22, 26) 100%
+  );
   color: var(--high-color);
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -229,7 +233,7 @@ li img {
 
 .item {
   display: flex;
-  width: min(300px, 20%);
+  width: min(300px, 15%);
   height: 50px;
   background-color: var(--base-color);
   border-radius: 6px;
@@ -246,9 +250,122 @@ li img {
   margin: auto;
   font-weight: bold;
   font-size: 1.2rem;
-  transition: 1s;
+  transition: 0.5s ease-in-out;
 }
 
 .item span:hover {
   color: white;
+  transform: scale(1.1);
+}
+
+/* Contact me section*/
+/* From Uiverse.io by Praashoo7 */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.main button {
+  background-color: var(--high-color);
+}
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+/* Shared styles for all cards */
+.card {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px;
+  box-shadow: var(--high-color) 0px 2px 8px -1px,
+    rgba(64, 83, 85, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card1 {
+  border-radius: 90px 5px 5px 5px;
+}
+
+.card1:hover {
+  background-color: #cc39a4;
+}
+
+.card1 .instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #a01b5e;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2 {
+  border-radius: 5px 90px 5px 5px;
+}
+
+.card2:hover {
+  background-color: #03a9f4;
+}
+
+.card2 .twitter {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #0357f4;
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3 {
+  border-radius: 5px 5px 5px 90px;
+}
+
+.card3:hover {
+  background-color: black;
+}
+
+.card3 .github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4 {
+  border-radius: 5px 5px 90px 5px;
+}
+
+.card4:hover {
+  background-color: #8c9eff;
+}
+
+.card4 .discord {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8650eb;
+}
+
+.card4:hover .discord {
+  fill: white;
 }
