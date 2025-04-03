@@ -1,13 +1,14 @@
 "use strict";
 
 const marqueElement = document.querySelector("#marquee .wrapper");
+const langList = ["Javascript", "Python", "Html", "CSS", "Json"];
 
-console.log(marqueElement);
+for (let i in langList) {
+  const newItem = document.createElement("div");
+  newItem.classList.add(`item`, `item-${i}`);
+  newItem.textContent = langList[i];
 
-const newItem = document.createElement("div");
-newItem.classList.add = "item";
-newItem.insertAdjacentHTML =
-  '<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />';
+  marqueElement.appendChild(newItem);
+}
 
-marqueElement.appendChild(newItem);
 //<div class="item"></div>
