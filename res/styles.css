@@ -201,6 +201,9 @@ li img {
   background-color: var(--high-color);
   color: var(--base-color);
 }
+#marquee section {
+  height: 0;
+}
 
 .wrapper {
   width: 90%;
@@ -225,9 +228,10 @@ li img {
 }
 
 .item {
-  width: 200px;
-  height: 100px;
-  background-color: red;
+  display: flex;
+  width: min(300px, 20%);
+  height: 50px;
+  background-color: var(--base-color);
   border-radius: 6px;
   position: absolute;
   left: max(1000px, 100%);
@@ -235,4 +239,16 @@ li img {
   animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.item span {
+  color: var(--high-color);
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 1s;
+}
+
+.item span:hover {
+  color: white;
 }
