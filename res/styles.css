@@ -166,7 +166,7 @@ button {
 /* Projects section
 /////////////////////////////////
 */
-li {
+#projects li {
   animation: appearLeft ease-out;
   animation-timeline: view();
   animation-range: entry 0 cover 20%;
@@ -175,7 +175,7 @@ li {
   font-size: 1.5rem;
   margin: 50px;
 }
-li img {
+#projects li img {
   max-width: 40%;
   max-height: 300px;
 }
@@ -205,59 +205,44 @@ li img {
   background-color: var(--high-color);
   color: var(--base-color);
 }
-#marquee section {
-  height: 0;
+#marquee .tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+.tag-list li {
+  padding: 1rem;
+  background-color: var(--base-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--base-color);
+  color: var(--high-color);
 }
 
-.wrapper {
-  width: 90%;
-  max-width: 1920px;
-  margin-inline: auto;
-  position: relative;
-  height: 100px;
+.scroller {
+  max-width: 600px;
+}
+
+.scroller[data-animated="true"] {
   overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 1) 90%,
-    rgba(0, 0, 0, 0)
-  );
+  -webkit-mask: linear-gradient(90deg, transparent 20%, white);
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
-
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+}
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 @keyframes scroll {
   to {
-    left: -200px;
+    transform: translate(-100%);
   }
 }
-
-.item {
-  display: flex;
-  width: min(300px, 15%);
-  height: 50px;
-  background-color: var(--base-color);
-  border-radius: 6px;
-  position: absolute;
-  left: max(1000px, 100%);
-  animation-name: scroll;
-  animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.item span {
-  color: var(--high-color);
-  margin: auto;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: 0.5s ease-in-out;
-}
-
-.item span:hover {
-  color: white;
-  transform: scale(1.1);
-}
-
 /* Contact me section*/
 /* From Uiverse.io by Praashoo7 */
 .main {
@@ -281,7 +266,6 @@ li img {
   gap: 0.5em;
 }
 
-/* Shared styles for all cards */
 .card {
   width: 90px;
   height: 90px;
