@@ -216,10 +216,15 @@ button {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--base-color);
   color: var(--high-color);
+  transition: 1s;
 }
-
+.tag-list li:hover {
+  color: white;
+  font-weight: bold;
+  transform: scale(1.1);
+}
 .scroller {
-  max-width: 600px;
+  max-width: 70%;
 }
 
 .scroller[data-animated="true"] {
@@ -233,14 +238,14 @@ button {
   animation: scroll 20s linear infinite;
 }
 .scroller__inner {
-  padding-block: 1rem;
+  padding-block: 1.3rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 @keyframes scroll {
   to {
-    transform: translate(-100%);
+    transform: translate(calc(-50% - 0.5rem));
   }
 }
 /* Contact me section*/

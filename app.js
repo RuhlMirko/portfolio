@@ -11,11 +11,16 @@ const langList = [
   "Tailwind",
   "tkinter",
   "ttkbootstrap",
+  "Git",
+  "github",
+  "NodeJs",
+  "ExpressJs",
+  "ReactJs",
+  "NextJs",
 ];
 for (let i in langList) {
   const newItem = document.createElement("li");
   newItem.innerText = langList[i];
-  console.log(newItem);
   ulElement.appendChild(newItem);
 }
 
@@ -27,6 +32,13 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce").matches) {
 function addAnimation() {
   scrollers.forEach((scroller) => {
     scroller.setAttribute("data-animated", true);
+    const scrollerInner = ulElement;
+    const scrollerContent = Array.from(scrollerInner.children);
+    scrollerContent.forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(clone);
+    });
   });
 }
 
