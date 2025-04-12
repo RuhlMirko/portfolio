@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --base-color: #2a262c;
+  --base-color: #2a292e;
   --basevar-color: #554761;
   --main-color: #6b7bc2;
   --secon-color: #8c8eec;
@@ -213,15 +213,14 @@ button {
   max-width: 40%;
   max-height: 300px;
 }
-.info img::after {
+#projects li img::after {
   background: inherit;
   position: absolute;
-  content: "";
+  content: "asda";
   filter: blur(25px) saturate(1.5);
   width: 100%;
   height: 100%;
   scale: 1.2;
-  z-index: -1;
 }
 .info,
 .info a {

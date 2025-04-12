@@ -1,0 +1,34 @@
+body {
+  background-color: #2a292e;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 40px;
+  margin-top: 3rem;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-flex;
+  justify-items: center;
+}
+
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px) saturate(1.5) hue-rotate(20deg);
+  transform: scale(1.02);
+  z-index: -1;
+}
+
+.image-wrapper:has(> #pdf-python)::after {
+  background-image: url("../res/images/pdf-python.png"); /* use same image */
+}
+
+.image-wrapper:has(> #pomodoro)::after {
+  background-image: url("../res/images/pomodoro.png"); /* use same image */
+}
