@@ -165,6 +165,13 @@ button:hover {
   border: 2px solid var(--high-color);
 }
 
+/* Intro
+///////
+*/
+#intro {
+  height: 100vh;
+}
+
 /* Indice
 ///////////
 */
@@ -195,6 +202,55 @@ button:hover {
   background-color: var(--high-color);
   border: none;
   height: 2px;
+}
+
+/* Marquee (Infinite scroll)
+//////////////////////////////////
+*/
+#marquee .tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+.tag-list li {
+  padding: 1rem;
+  background-color: var(--base-color);
+  border: 2px solid var(--high-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.4rem var(--high-color);
+  color: var(--high-color);
+  transition: 1s;
+  font-size: 1.1rem;
+}
+.tag-list li:hover {
+  color: white;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.scroller {
+  max-width: 80%;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent 20%, white);
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+}
+.scroller__inner {
+  padding-block: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 /* Projects section
@@ -231,52 +287,6 @@ button:hover {
 }
 .info h2:hover {
   color: var(--base-color);
-}
-/* Marque (Infinite scroll)
-*/
-#marquee .tag-list {
-  margin: 0;
-  padding-inline: 0;
-  list-style: none;
-}
-.tag-list li {
-  padding: 1rem;
-  background-color: var(--base-color);
-  border: 2px solid var(--high-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.4rem var(--high-color);
-  color: var(--high-color);
-  transition: 1s;
-}
-.tag-list li:hover {
-  color: white;
-  font-weight: bold;
-  transform: scale(1.1);
-}
-.scroller {
-  max-width: 80%;
-}
-
-.scroller[data-animated="true"] {
-  overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent 20%, white);
-  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-}
-.scroller[data-animated="true"] .scroller__inner {
-  width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll 20s linear infinite;
-}
-.scroller__inner {
-  padding-block: 1.3rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-@keyframes scroll {
-  to {
-    transform: translate(calc(-50% - 0.5rem));
-  }
 }
 /* Contact me section*/
 #about p {
