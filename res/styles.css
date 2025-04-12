@@ -4,7 +4,7 @@
   --base-color: #2a262c;
   --basevar-color: #554761;
   --main-color: #6b7bc2;
-  --secon-color: #756ed4;
+  --secon-color: #8c8eec;
   --high-color: #75b2eb;
 }
 .lightmode {
@@ -145,7 +145,8 @@ button {
   transition: 0.5s ease-out;
   font-weight: bold;
   margin: 8px;
-  width: 20vh;
+  width: 30vh;
+  font-family: inherit;
 }
 .primary-btn {
   background-color: var(--high-color);
@@ -163,6 +164,39 @@ button {
   color: var(--high-color);
   border: 2px solid var(--high-color);
 }
+
+/* Indice
+///////////
+*/
+#index {
+  width: 100%;
+}
+#index ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#index li a {
+  margin: 0 3em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: 0.3s;
+  color: var(--high-color);
+  text-decoration: none;
+}
+#index li a:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+  color: white;
+}
+#index hr {
+  width: 100%;
+  background-color: var(--high-color);
+  border: none;
+  height: 2px;
+}
+
 /* Projects section
 /////////////////////////////////
 */
@@ -179,6 +213,16 @@ button {
   max-width: 40%;
   max-height: 300px;
 }
+.info img::after {
+  background: inherit;
+  position: absolute;
+  content: "";
+  filter: blur(25px) saturate(1.5);
+  width: 100%;
+  height: 100%;
+  scale: 1.2;
+  z-index: -1;
+}
 .info,
 .info a {
   display: flex;
@@ -193,7 +237,6 @@ button {
 .info span {
   font-style: italic;
   font-size: 1.1;
-  font-weight: lighter;
   color: var(--secon-color);
 }
 .info h2:hover {
@@ -201,10 +244,6 @@ button {
 }
 /* Marque (Infinite scroll)
 */
-#marquee {
-  background-color: var(--high-color);
-  color: var(--base-color);
-}
 #marquee .tag-list {
   margin: 0;
   padding-inline: 0;
@@ -213,8 +252,9 @@ button {
 .tag-list li {
   padding: 1rem;
   background-color: var(--base-color);
+  border: 2px solid var(--high-color);
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--base-color);
+  box-shadow: 0 0.5rem 1rem -0.4rem var(--high-color);
   color: var(--high-color);
   transition: 1s;
 }
@@ -224,7 +264,7 @@ button {
   transform: scale(1.1);
 }
 .scroller {
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .scroller[data-animated="true"] {
@@ -249,112 +289,102 @@ button {
   }
 }
 /* Contact me section*/
-/* From Uiverse.io by Praashoo7 */
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+#about p {
+  color: var(--high-color);
+  text-align: center;
 }
-
-.main button {
-  background-color: var(--high-color);
-}
-.up {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-}
-
-.down {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-}
-
-.card {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px;
-  box-shadow: var(--high-color) 0px 2px 8px -1px,
-    rgba(64, 83, 85, 0.3) 0px 1px 3px -1px;
-  transition: 0.2s ease-in-out;
+#about span {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.card:hover {
-  scale: 1.1;
+/* From Uiverse.io by Praashoo7 */
+.wrapper {
+  display: flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: inherit;
+  justify-content: center;
 }
 
-.card1 {
-  border-radius: 90px 5px 5px 5px;
+.wrapper .icon {
+  position: relative;
+  background: var(--basevar-color);
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px #31a6c450;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.card1:hover {
-  background-color: #cc39a4;
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px #31a6c450;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.card1 .instagram {
-  margin-top: 1.5em;
-  margin-left: 1.2em;
-  fill: #a01b5e;
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.card1:hover .instagram {
-  fill: white;
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-.card2 {
-  border-radius: 5px 90px 5px 5px;
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.card2:hover {
-  background-color: #03a9f4;
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
 }
 
-.card2 .twitter {
-  margin-top: 1.5em;
-  margin-left: -0.9em;
-  fill: #0357f4;
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
 }
 
-.card2:hover .twitter {
-  fill: white;
-}
-
-.card3 {
-  border-radius: 5px 5px 5px 90px;
-}
-
-.card3:hover {
-  background-color: black;
-}
-
-.card3 .github {
-  margin-top: -0.6em;
-  margin-left: 1.2em;
-}
-
-.card3:hover .github {
-  fill: white;
-}
-
-.card4 {
-  border-radius: 5px 5px 90px 5px;
-}
-
-.card4:hover {
-  background-color: #8c9eff;
-}
-
-.card4 .discord {
-  margin-top: -0.9em;
-  margin-left: -1.2em;
-  fill: #8650eb;
-}
-
-.card4:hover .discord {
-  fill: white;
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
 }
