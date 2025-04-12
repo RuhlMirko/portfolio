@@ -20,8 +20,8 @@ body {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: blur(25px) saturate(1.5) hue-rotate(20deg);
-  transform: scale(1.02);
+  filter: blur(15px) saturate(1.5) hue-rotate(20deg);
+  transform: scale(1.07);
   z-index: -1;
 }
 

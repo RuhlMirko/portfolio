@@ -148,13 +148,13 @@ button {
   width: 30vh;
   font-family: inherit;
 }
+button:hover {
+  box-shadow: 0 0.7rem 1rem -0.4rem var(--high-color);
+}
 .primary-btn {
   background-color: var(--high-color);
   border: 0;
   outline: #2a262c;
-}
-.primary-btn:hover {
-  background-color: var(--main-color);
 }
 .outline-primary-btn:hover {
   background-color: #313358;
@@ -212,15 +212,6 @@ button {
 #projects li img {
   max-width: 40%;
   max-height: 300px;
-}
-#projects li img::after {
-  background: inherit;
-  position: absolute;
-  content: "asda";
-  filter: blur(25px) saturate(1.5);
-  width: 100%;
-  height: 100%;
-  scale: 1.2;
 }
 .info,
 .info a {
