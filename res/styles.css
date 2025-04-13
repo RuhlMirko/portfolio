@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --base-color: #2a292e;
-  --basevar-color: #475a61;
+  --base-color: rgb(20, 20, 20);
+  --basevar-color: #3f4a4e;
   --main-color: #6b98c2;
   --secon-color: #b7dfe6;
   --high-color: #67cbe4;
@@ -151,6 +151,9 @@ button {
 button:hover {
   box-shadow: 0 0.7rem 1rem -0.4rem var(--high-color);
 }
+hr {
+  margin-bottom: 24px;
+}
 .primary-btn {
   background-color: var(--high-color);
   border: 0;
@@ -170,6 +173,9 @@ button:hover {
 */
 #intro {
   height: 100vh;
+  animation: appear 0.8s ease-in-out forwards;
+  /* Optional: make sure it's ready to animate */
+  opacity: 0;
 }
 #intro h1,
 p,
@@ -179,6 +185,7 @@ h3 {
 #intro p {
   font-style: italic;
 }
+
 /* Indice
 ///////////
 */
@@ -258,6 +265,40 @@ h3 {
   to {
     transform: translate(calc(-50% - 0.5rem));
   }
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1080px;
+  width: calc(100%-20px);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 260px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at 100px 100px,
+    rgba(255, 255, 255, 0.06),
+    transparent 50%
+  );
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 2;
 }
 
 /* Projects section

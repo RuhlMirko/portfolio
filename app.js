@@ -42,6 +42,8 @@ function addAnimation() {
   });
 }
 
+const handleOnMouseMove = (e) => {};
+
 /*
 const numItems = langList.length;
 const totalDuration = 30; // in seconds
