@@ -383,11 +383,12 @@ h3 {
   justify-content: center;
   gap: 20px;
 }
-
 #socials g {
   fill: var(--high-color);
 }
-
+#socials path {
+  fill: var(--high-color);
+}
 #socials svg {
   height: 2rem;
   width: 2rem;
@@ -397,7 +398,6 @@ h3 {
   padding: 10px;
   transition: 0.3s;
 }
-
 #socials svg:hover {
   box-shadow: 0 0 1rem #67cbe498;
 }
