@@ -44,6 +44,17 @@ function addAnimation() {
 
 const handleOnMouseMove = (e) => {};
 
+const stickyDiv = document.getElementById("index");
+const stickyOffset = stickyDiv.offsetTop;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= stickyOffset) {
+    stickyDiv.classList.add("fixed");
+  } else {
+    stickyDiv.classList.remove("fixed");
+  }
+});
+
 /*
 const numItems = langList.length;
 const totalDuration = 30; // in seconds
