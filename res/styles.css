@@ -378,6 +378,30 @@ h3 {
   background-color: #282829;
 }
 
+#socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#socials g {
+  fill: var(--high-color);
+}
+
+#socials svg {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  border: 2px solid var(--high-color);
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+#socials svg:hover {
+  box-shadow: 0 0 1rem #67cbe498;
+}
+
 footer {
   display: flex;
   flex-direction: column;
