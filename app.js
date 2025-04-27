@@ -44,6 +44,7 @@ function addAnimation() {
 
 const handleOnMouseMove = (e) => {};
 
+/* Styling that css can't do*/
 const stickyDiv = document.getElementById("index");
 const stickyOffset = stickyDiv.offsetTop;
 
@@ -55,6 +56,12 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("index");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 /*
 const numItems = langList.length;
 const totalDuration = 30; // in seconds

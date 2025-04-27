@@ -189,14 +189,36 @@ h3 {
   gap: 20px;
 }
 
+#menu-toggle {
+  display: none;
+}
+
 @media (max-width: 1200px) {
+  #index hr {
+    display: none;
+  }
+  #menu-toggle {
+    display: block;
+    margin: auto;
+  }
+  button {
+    width: auto;
+    font-size: 3rem;
+  }
+  svg:hover,
+  button:hover {
+    transform: translate(0);
+    box-shadow: none;
+    background: none;
+  }
+
   #index {
     position: fixed;
     inset: 0 0 0 30%;
-    margin: 0;
     padding: 0;
     display: flex;
     justify-content: flex-start;
+    z-index: 999;
   }
 
   #index ul {
@@ -204,14 +226,41 @@ h3 {
     flex-direction: column;
     gap: 5rem;
     padding: 10rem 2em;
+    margin: auto;
   }
 
   #index .item {
     font-size: 2.5rem;
   }
 
-  #index hr {
-    display: none;
+  #tools .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projects li {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #projects li img {
+    width: 70%;
+    height: auto;
+  }
+  #projects p {
+    font-size: 2.2rem;
+    margin: 10px 10px 20px;
+  }
+
+  #about {
+    font-size: 2rem;
+    margin: 40px;
+  }
+  #about button {
+    width: 80%;
+    font-size: 2.5rem;
+    padding: 40px 20px;
+    border-radius: 20px;
   }
 }
 
@@ -270,6 +319,7 @@ h3 {
 }
 #motion button {
   font-size: 1rem;
+  width: auto;
 }
 #motion h2 {
   font-weight: 400;
@@ -337,7 +387,7 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
-#cards {
+.card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
