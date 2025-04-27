@@ -200,16 +200,21 @@ h3 {
   #menu-toggle {
     display: block;
     margin: auto;
+    background: none;
+    border: none;
   }
-  button {
-    width: auto;
-    font-size: 3rem;
+  #menu-toggle span {
+    position: absolute;
+    font-size: 5rem;
+    width: 1rem;
+    aspect-ratio: 1;
+    top: 5%;
+    right: 60%;
   }
   svg:hover,
   button:hover {
-    transform: translate(0);
     box-shadow: none;
-    background: none;
+    background-color: none;
   }
 
   #index {
