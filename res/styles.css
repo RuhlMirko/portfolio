@@ -189,86 +189,6 @@ h3 {
   gap: 20px;
 }
 
-#menu-toggle {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  #index hr {
-    display: none;
-  }
-  #menu-toggle {
-    display: block;
-    margin: auto;
-    background: none;
-    border: none;
-  }
-  #menu-toggle span {
-    position: absolute;
-    font-size: 5rem;
-    width: 1rem;
-    aspect-ratio: 1;
-    top: 5%;
-    right: 60%;
-  }
-  svg:hover,
-  button:hover {
-    box-shadow: none;
-    background-color: none;
-  }
-
-  #index {
-    position: fixed;
-    inset: 0 0 0 30%;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    z-index: 999;
-  }
-
-  #index ul {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    padding: 10rem 2em;
-    margin: auto;
-  }
-
-  #index .item {
-    font-size: 2.5rem;
-  }
-
-  #tools .card-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #projects li {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #projects li img {
-    width: 70%;
-    height: auto;
-  }
-  #projects p {
-    font-size: 2.2rem;
-    margin: 10px 10px 20px;
-  }
-
-  #about {
-    font-size: 2rem;
-    margin: 40px;
-  }
-  #about button {
-    width: 80%;
-    font-size: 2.5rem;
-    padding: 40px 20px;
-    border-radius: 20px;
-  }
-}
-
 /* Indice
 ///////////
 */
@@ -324,7 +244,6 @@ h3 {
 }
 #motion button {
   font-size: 1rem;
-  width: auto;
 }
 #motion h2 {
   font-weight: 400;
@@ -392,7 +311,7 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
-.card-container {
+#cards {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -506,7 +425,6 @@ svg {
 }
 svg:hover {
   box-shadow: 0 0 1rem #67cbe498;
-  transform: translateY(-0.3rem);
 }
 
 footer {
