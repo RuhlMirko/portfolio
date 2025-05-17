@@ -30,7 +30,9 @@ body {
 
 /*/////////////////////////////////////*/
 /* Dont touch it (view() animation)*/
-section {
+section,
+header,
+main {
   display: grid;
   place-items: center;
   align-content: center;
@@ -356,46 +358,6 @@ h3 {
     transform: translate(calc(-50% - 0.5rem));
   }
 }
-#tools {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-width: 1080px;
-  width: calc(100%-20px);
-  margin: 20px;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 3px solid rgba(101, 198, 223, 0.1);
-  height: 260px;
-  width: 300px;
-  border-radius: 10px;
-  cursor: pointer;
-  position: relative;
-}
-
-.card::before {
-  background: radial-gradient(
-    800px circle at 100px 100px,
-    rgba(255, 255, 255, 0.06),
-    transparent 50%
-  );
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  z-index: 2;
-}
-
 /* Projects section
 /////////////////////////////////
 */
