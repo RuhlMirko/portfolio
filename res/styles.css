@@ -330,6 +330,9 @@ h3 {
   padding-inline: 0;
   list-style: none;
 }
+#marquee li i {
+  font-size: 20px;
+}
 .tag-list li {
   padding: 1rem;
   background-color: var(--base-color);
