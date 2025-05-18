@@ -201,7 +201,7 @@ h3 {
   place-items: center;
   align-content: center;
   width: 100%;
-  background: #0f11117e;
+  background: #0f1111c2;
   backdrop-filter: blur(50px);
   padding-top: 10px;
 }
@@ -212,6 +212,7 @@ h3 {
   transition: all 0.3s ease;
 }
 #index li a {
+  position: relative;
   margin: 0 3em;
   font-size: 1.5rem;
   font-weight: 500;
@@ -220,9 +221,22 @@ h3 {
   text-decoration: none;
 }
 #index li a:hover {
-  transform: scaleX(1.1);
-  font-weight: 700;
   color: white;
+}
+#index li a::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+#index li a:hover::before {
+  transform: scaleX(1);
 }
 #index hr {
   width: 100%;
@@ -385,7 +399,6 @@ h3 {
 }
 .info span {
   font-style: italic;
-  font-size: 1.1;
   color: var(--secon-color);
 }
 .info h2:hover {
@@ -394,6 +407,7 @@ h3 {
 /* Contact me section*/
 #about p {
   color: var(--high-color);
+  font-size: 1.2rem;
 }
 
 #about br {

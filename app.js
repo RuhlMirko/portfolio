@@ -15,12 +15,29 @@ const langList = [
   "github",
   "NodeJs",
   "ExpressJs",
-  "ReactJs",
+  "React",
   "NextJs",
+];
+const langIcon = [
+  '<i class="devicon-javascript-plain"></i>',
+  '<i class="devicon-python-plain"></i>',
+  '<i class="devicon-html5-plain"></i>',
+  '<i class="devicon-css3-plain"></i>',
+  '<i class="devicon-json-plain"></i>',
+  '<i class="devicon-bootstrap-plain"></i>',
+  '<i class="devicon-tailwindcss-plain"></i>',
+  "",
+  "",
+  '<i class="devicon-git-plain"></i>',
+  '<i class="devicon-github-plain"></i>',
+  '<i class="devicon-nodejs-plain"></i>',
+  '<i class="devicon-express-original"></i>',
+  '<i class="devicon-react-original"></i>',
+  '<i class="devicon-nextjs-original-wordmark"></i>',
 ];
 for (let i in langList) {
   const newItem = document.createElement("li");
-  newItem.innerText = langList[i];
+  newItem.innerHTML = `${langIcon[i]}  ${langList[i]}`;
   ulElement.appendChild(newItem);
 }
 
