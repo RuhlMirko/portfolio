@@ -1,6 +1,8 @@
 "use strict";
 
 const ulElement = document.querySelector(".scroller__inner");
+const tooltip = document.getElementById("tooltip");
+const socialBtn = document.getElementById("social-btn");
 const langList = [
   "Javascript",
   "Python",
@@ -79,6 +81,11 @@ const menu = document.getElementById("index");
 toggle.addEventListener("click", () => {
   menu.classList.toggle("show");
 });
+
+function clipboard(e) {
+  const email = "ruhlmirkojoel@gmail.com";
+  navigator.clipboard.writeText(email);
+}
 /*
 const numItems = langList.length;
 const totalDuration = 30; // in seconds
