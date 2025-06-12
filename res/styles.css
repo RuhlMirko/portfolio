@@ -141,8 +141,8 @@ p {
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 1.3rem;
+  padding: 3vh 0;
+  font-size: 1.3vw;
   border-radius: 5px;
   transition: 0.5s ease-out;
   font-weight: 600;
@@ -350,9 +350,6 @@ h3 {
   align-items: center;
   margin-top: 4rem;
 }
-#motion button {
-  font-size: 1rem;
-}
 #motion h2 {
   font-weight: 400;
 }
@@ -451,7 +448,7 @@ h3 {
 /* Contact me section*/
 #about p {
   color: var(--high-color);
-  font-size: 1.2rem;
+  font-size: 1.5vw;
 }
 
 #about br {
@@ -467,8 +464,7 @@ h3 {
   box-shadow: none;
 }
 #about button {
-  width: 60%;
-  padding: 24px 0;
+  width: 50vw;
 }
 
 #socials {
