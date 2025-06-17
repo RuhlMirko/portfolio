@@ -3,6 +3,7 @@
 const ulElement = document.querySelector(".scroller__inner");
 const tooltip = document.getElementById("tooltip");
 const socialBtn = document.getElementById("social-btn");
+const footerEl = document.getElementById("footer");
 const langList = [
   "Javascript",
   "Python",
@@ -75,17 +76,12 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const toggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("index");
-
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("show");
-});
-
 function clipboard(e) {
   const email = "ruhlmirkojoel@gmail.com";
   navigator.clipboard.writeText(email);
 }
+footerEl.innerHTML += `<p>© ${new Date().getFullYear()} Mirko Joel Ruhl. All rights reserved.</p>`;
+
 /*
 const numItems = langList.length;
 const totalDuration = 30; // in seconds
