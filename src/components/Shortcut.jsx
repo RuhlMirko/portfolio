@@ -1,11 +1,11 @@
 function CopyEmailToClipboard() {
-    const email = "ruhlmirkojoel@gmai.com";
+    const email = "ruhlmirkojoel@gmail.com";
     navigator.clipboard.writeText(email).then(() => {
       const statusElement = document.querySelector('.email-status');
       statusElement.style.opacity = '1';
       setTimeout(() => {
         statusElement.style.opacity = '0';
-      }, 2000);
+      }, 2200);
     });
     }
 
@@ -27,8 +27,8 @@ export default function Shortcut() {
           </li>
           
           <li>  
-            <button onClick={()=>CopyEmailToClipboard} className="button">                   
-              <i class="fas fa-envelope shortcut-icon"></i>
+            <button onClick={()=>CopyEmailToClipboard()} className="button">                   
+              <i className="fas fa-envelope shortcut-icon"></i>
             </button>
           </li>        
         </ul>

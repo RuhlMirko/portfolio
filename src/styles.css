@@ -16,17 +16,48 @@
   --color-primary: #90ecf8;
   --color-secondary: #eee;
   --color-highlight: #bdf5f5;
+  --color-primary-transparent: rgba(144, 236, 248, 0.3);
+  --bg-dark: #121212;
+  --bg-overlay: rgba(31, 190, 211, 0.26);
 
-  /* Transition */
-  --transition-speed: 0.2s ease-in-out;
+  /* Spacing Scale */
+  --spacing-sm: 0.5em;
+  --spacing-md: 1em;
+  --spacing-lg: 1.5em;
+  --spacing-xl: 2em;
+
+  /* Border Styles */
+  --border-width: 2px;
+  --border-style: 1px solid var(--color-primary);
+  --border-radius-sm: 8px;
+  --border-radius-full: 50%;
+
+  /* Sizing */
+  --button-size: 3em;
+  --icon-size: 1.5rem;
+  --nav-max-width: 800px;
+
+  /* Transitions */
+  --transition-speed: 0.2s ease-in;
+  --transition-hover: var(--transition-speed);
+
+  /* Effects */
+  --backdrop-blur: blur(10px);
+  --hover-scale: 1.2;
+  --inactive-opacity: 0.5;
 }
 
 /* ===== GLOBAL STYLES ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  box-sizing: border-box;
   padding: 0;
 }
 
@@ -36,10 +67,16 @@ h1 {
   margin: 0;
 }
 
+section {
+  min-height: 30vh;
+  border-bottom: var(--border-style);
+}
+
 /* ===== LINKS ===== */
 a {
   text-decoration: none;
-  transition: var(--transition-speed);
+  transition: var(--transition-hover);
+  color: inherit;
 }
 
 a:hover {
@@ -49,60 +86,60 @@ a:hover {
 /* ===== NAVIGATION ===== */
 nav {
   width: 100%;
-  border-bottom: 1px solid var(--color-primary);
-  margin: 0;
-  background-color: #1fbed342;
-  backdrop-filter: blur(10px);
+  border-bottom: var(--border-style);
+  background-color: var(--bg-overlay);
+  backdrop-filter: var(--backdrop-blur);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 nav ul {
   display: flex;
   list-style: none;
   justify-content: space-around;
-  margin: 0;
-  padding: 0.5em;
-  max-width: 800px;
+  align-items: center;
   margin: 0 auto;
+  padding: var(--spacing-sm);
+  max-width: var(--nav-max-width);
   flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+nav li {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-hover);
+  cursor: pointer;
+}
+
+nav li:hover {
+  border-color: var(--color-highlight);
 }
 
 nav a {
   color: var(--color-secondary);
   font-weight: 700;
 }
-nav li {
-  padding: 0.5em 1em;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  transition: var(--transition-speed);
-}
-
-nav li:hover {
-  border: 2px solid var(--color-highlight);
-  cursor: pointer;
-}
-
-section {
-  height: 30vh;
-}
 
 /* ===== HERO SECTION ===== */
 #hero {
-  height: 62vh;
+  min-height: 62vh;
   text-align: center;
-  border-bottom: 1px solid var(--color-primary);
   color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-xl);
 }
 
 #hero h1 {
-  margin: 0;
-  padding-top: 22vh;
+  margin-top: 15vh;
 }
 
 #hero p {
-  margin-top: 0.5em;
+  margin-top: var(--spacing-sm);
   font-style: italic;
   font-weight: 500;
   font-size: 1.3em;
@@ -111,61 +148,80 @@ section {
 
 /* ===== SHORTCUT LINKS ===== */
 .shortcut-links {
-  margin-top: 1.5em;
+  margin-top: var(--spacing-lg);
   display: flex;
   justify-content: center;
-  gap: 1.5em;
+  gap: var(--spacing-lg);
   padding: 0;
   list-style: none;
 }
 
-.shortcut-links a {
-  padding: 0.5em;
-  border: 2px solid var(--color-primary);
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  height: 1.5em;
+.shortcut-links .button {
+  background: none;
+  border: var(--border-width) solid var(--color-primary);
+  border-radius: var(--border-radius-full);
+  width: var(--button-size);
+  height: var(--button-size);
+  min-width: var(--button-size);
+  min-height: var(--button-size);
+  max-width: var(--button-size);
+  max-height: var(--button-size);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition-hover);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
-.shortcut-links .button {
-  background: none;
-  border: 2px solid var(--color-primary);
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  transition: var(--transition-speed);
-}
-
-/* Fade out non-hovered items when any item is hovered */
+/* Hover effects */
 .shortcut-links:has(.button:hover) .button:not(:hover) {
-  border-color: rgba(144, 236, 248, 0.3);
-  opacity: 0.5;
+  border-color: var(--color-primary-transparent);
+  opacity: var(--inactive-opacity);
 }
 
-.shortcut-links a:hover,
 .shortcut-links .button:hover {
   border-color: var(--color-highlight);
-  /* height: 1.7em; */
-  transform: scale(120%);
+  transform: scale(var(--hover-scale));
 }
 
+.shortcut-links .button:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 2px;
+}
+
+/* Icons */
 .shortcut-icon {
-  font-size: 1.5rem;
+  font-size: var(--icon-size);
   color: var(--color-primary);
+  transition: var(--transition-hover);
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  line-height: 1;
 }
 
+/* ===== EMAIL STATUS ===== */
 .email-status {
   opacity: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-secondary);
-  border: 2px solid var(--color-primary);
+  border: var(--border-width) solid var(--color-primary);
   width: fit-content;
-  margin: 0 auto;
-  padding: 1em 2em;
-  border-radius: 8px;
-  background-color: #1fbed342;
+  margin: 16px auto 0;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-overlay);
+  transition: var(--transition-hover);
+  pointer-events: none;
+}
+
+.email-status.show {
+  opacity: 1;
 }
 
 /* ===== MEDIA QUERIES ===== */
@@ -173,6 +229,7 @@ section {
   :root {
     color: #213547;
     background-color: #ffffff;
+    --bg-dark: #ffffff;
   }
 
   a:hover {
@@ -181,5 +238,36 @@ section {
 
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  #hero {
+    min-height: 50vh;
+    padding: var(--spacing-md);
+  }
+
+  #hero p {
+    font-size: 1.1em;
+  }
+
+  nav ul {
+    gap: var(--spacing-sm);
+  }
+
+  .shortcut-links {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
