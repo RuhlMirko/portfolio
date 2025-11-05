@@ -10,9 +10,9 @@ import './styles.css';
 
 function App() {
   return (
-    <>
-      <Header />      
+    <>          
       <Hero />      
+      <Header />  
       <About />
       <Projects />
       <Skills />

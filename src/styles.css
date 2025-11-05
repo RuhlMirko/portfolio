@@ -1,11 +1,11 @@
 :root {
-  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #222;
+  background-color: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,11 +14,11 @@
 
   /* Color Variables */
   --color-primary: #90ecf8;
-  --color-secondary: #9c26e0;
+  --color-secondary: #eee;
   --color-highlight: #bdf5f5;
 
   /* Transition */
-  --transition-speed: 0.2s;
+  --transition-speed: 0.2s ease-in-out;
 }
 
 /* ===== GLOBAL STYLES ===== */
@@ -51,7 +51,10 @@ nav {
   width: 100%;
   border-bottom: 1px solid var(--color-primary);
   margin: 0;
-  background-color: #0a7f8f42;
+  background-color: #1fbed342;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
 }
 
 nav ul {
@@ -59,28 +62,51 @@ nav ul {
   list-style: none;
   justify-content: space-around;
   margin: 0;
-  padding: 1em;
+  padding: 0.5em;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-weight: 700;
+}
+nav li {
+  padding: 0.5em 1em;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: var(--transition-speed);
+}
+
+nav li:hover {
+  border: 2px solid var(--color-highlight);
+  cursor: pointer;
+}
+
+section {
+  height: 30vh;
 }
 
 /* ===== HERO SECTION ===== */
 #hero {
-  height: 30vh;
+  height: 62vh;
   text-align: center;
-  padding: 20vh;
   border-bottom: 1px solid var(--color-primary);
   color: var(--color-primary);
+}
+
+#hero h1 {
+  margin: 0;
+  padding-top: 22vh;
 }
 
 #hero p {
   margin-top: 0.5em;
   font-style: italic;
-  font-size: 1.2em;
-  color: var(--color-highlight);
+  font-weight: 500;
+  font-size: 1.3em;
+  color: var(--color-secondary);
 }
 
 /* ===== SHORTCUT LINKS ===== */
@@ -95,7 +121,7 @@ nav a {
 
 .shortcut-links a {
   padding: 0.5em;
-  border: 1px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 50%;
   aspect-ratio: 1/1;
   height: 1.5em;
@@ -104,14 +130,42 @@ nav a {
   justify-content: center;
 }
 
-.shortcut-links a:hover {
+.shortcut-links .button {
+  background: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  transition: var(--transition-speed);
+}
+
+/* Fade out non-hovered items when any item is hovered */
+.shortcut-links:has(.button:hover) .button:not(:hover) {
+  border-color: rgba(144, 236, 248, 0.3);
+  opacity: 0.5;
+}
+
+.shortcut-links a:hover,
+.shortcut-links .button:hover {
   border-color: var(--color-highlight);
-  border-width: 4px;
+  /* height: 1.7em; */
+  transform: scale(120%);
 }
 
 .shortcut-icon {
   font-size: 1.5rem;
   color: var(--color-primary);
+}
+
+.email-status {
+  opacity: 0;
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-primary);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1em 2em;
+  border-radius: 8px;
+  background-color: #1fbed342;
 }
 
 /* ===== MEDIA QUERIES ===== */
