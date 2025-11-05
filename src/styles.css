@@ -59,6 +59,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   padding: 0;
+  background-image: linear-gradient(
+      rgba(18, 18, 18, 0.774),
+      rgba(18, 18, 18, 0.63)
+    ),
+    url("./assets/bg-121212-lg.webp");
+  background-size: cover;
+  /* background-attachment: fixed; */
 }
 
 h1 {
@@ -69,7 +76,7 @@ h1 {
 
 section {
   min-height: 30vh;
-  border-bottom: var(--border-style);
+  padding: var(--spacing-lg) var(--spacing-xl);
 }
 
 /* ===== LINKS ===== */
@@ -132,6 +139,7 @@ nav a {
   flex-direction: column;
   justify-content: center;
   padding: var(--spacing-xl);
+  border-bottom: var(--border-style);
 }
 
 #hero h1 {
@@ -222,6 +230,36 @@ nav a {
 
 .email-status.show {
   opacity: 1;
+}
+
+#about-me {
+  padding-top: var(--spacing-xl);
+  margin: 0 auto;
+  max-width: 900px;
+}
+#about-me h2 {
+  color: var(--color-primary);
+}
+#about-me p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1em;
+  color: var(--color-secondary);
+  max-width: 800px;
+}
+#about-me a {
+  color: var(--color-highlight);
+  text-decoration: underline;
+}
+#about-me a:hover {
+  color: var(--color-primary);
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: 0.9em;
+  color: var(--color-secondary);
+  background-color: var(--bg-overlay);
 }
 
 /* ===== MEDIA QUERIES ===== */
