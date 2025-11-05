@@ -10,7 +10,7 @@ import './styles.css';
 
 function App() {
   return (
-    <>
+    <body>
       <Header />      
       <Hero />      
       <About />
@@ -19,7 +19,7 @@ function App() {
       <Contact />
       <Resume />
       <Footer />
-    </>
+    </body>
   );
 }
 
