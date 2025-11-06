@@ -18,8 +18,11 @@
   --color-highlight: #bdf5f5;
   --color-primary-transparent: rgba(144, 236, 248, 0.3);
   --bg-dark: #121212;
-  --bg-overlay: rgba(31, 190, 211, 0.26);
-
+  /* --bg-overlay: rgba(31, 190, 211, 0.26); */
+  --bg-overlay: linear-gradient(
+    rgba(11, 175, 197, 0.26),
+    rgba(15, 69, 77, 0.26)
+  );
   /* Spacing Scale */
   --spacing-sm: 0.5em;
   --spacing-md: 1em;
@@ -65,7 +68,6 @@ body {
     ),
     url("./assets/bg-121212-lg.webp");
   background-size: cover;
-  /* background-attachment: fixed; */
 }
 
 h1 {
@@ -108,7 +110,7 @@ a:hover {
 nav {
   width: 100%;
   border-bottom: var(--border-style);
-  background-color: var(--bg-overlay);
+  background: var(--bg-overlay);
   backdrop-filter: var(--backdrop-blur);
   position: sticky;
   top: 0;
@@ -292,10 +294,15 @@ nav a {
   margin: 0 auto;
   transition: var(--transition-hover);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #projects .project-card:hover {
-  background-color: var(--bg-overlay);
+  background-color: #181818;
+}
+.project-card p {
+  max-width: 600px;
+  font-size: 1.2em;
+  line-height: 1.6;
 }
 
 footer {
