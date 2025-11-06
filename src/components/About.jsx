@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id='about-me'>
+    <section id='about' className="inner-section">
       <h2>Welcome to My Portfolio</h2>
       <p>
         Full Stack Developer with experience building modern web applications. I specialize in creating intuitive user experiences with a strong focus on design and accessibility.

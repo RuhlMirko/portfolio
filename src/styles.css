@@ -79,6 +79,16 @@ section {
   padding: var(--spacing-lg) var(--spacing-xl);
 }
 
+.inner-section {
+  width: 90%;
+  max-width: 900px;
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+  margin: 24px auto;
+  background-color: var(--bg-dark);
+  backdrop-filter: var(--backdrop-blur);
+}
+
 /* ===== LINKS ===== */
 a {
   text-decoration: none;
@@ -232,25 +242,24 @@ nav a {
   opacity: 1;
 }
 
-#about-me {
+#about {
   padding-top: var(--spacing-xl);
-  margin: 0 auto;
-  max-width: 900px;
 }
-#about-me h2 {
+#about h2 {
   color: var(--color-primary);
 }
-#about-me p {
+#about p {
   font-family: "Nunito", sans-serif;
   font-size: 1.1em;
   color: var(--color-secondary);
   max-width: 800px;
+  line-height: 1.6;
 }
-#about-me a {
+#about a {
   color: var(--color-highlight);
   text-decoration: underline;
 }
-#about-me a:hover {
+#about a:hover {
   color: var(--color-primary);
 }
 
