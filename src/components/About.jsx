@@ -6,7 +6,7 @@ export default function About() {
         Full Stack Developer with experience building modern web applications. I specialize in creating intuitive user experiences with a strong focus on design and accessibility.
       </p>
       <p>
-        I'm proficient in both Frontend and Backend development, working with technologies such as React, Node.js, Express, and MongoDB. I enjoy crafting responsive, user-friendly interfaces while ensuring robust server-side performance.
+        I'm proficient in both <a href="">Frontend</a>  and  <a href="">Backend</a> development, working with technologies such as React, Node.js, Express, and MongoDB. I enjoy crafting responsive, user-friendly interfaces while ensuring robust server-side performance.
       </p>
       <p>
         In previous <a href="">projects</a>, I've successfully developed and deployed web applications that exceed client expectations and deliver seamless user experiences. I'm always eager to learn new technologies and stay current with industry trends.

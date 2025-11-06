@@ -270,6 +270,10 @@ nav a {
   color: var(--color-primary);
 }
 
+#projects {
+  max-width: 1400px;
+}
+
 #projects img {
   height: 25vw;
   border-radius: 5px;
@@ -301,6 +305,7 @@ nav a {
 }
 #projects .project-card:hover {
   background-color: #181818;
+  transform: translateY(-5px);
 }
 .project-card p {
   max-width: 600px;
