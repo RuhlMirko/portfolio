@@ -252,7 +252,7 @@ nav a {
   font-family: "Nunito", sans-serif;
   font-size: 1.1em;
   color: var(--color-secondary);
-  max-width: 800px;
+  max-width: 700px;
   line-height: 1.6;
 }
 #about a {
