@@ -79,12 +79,16 @@ section {
   padding: var(--spacing-lg) var(--spacing-xl);
 }
 
-.inner-section {
+main section {
   width: 90%;
-  max-width: 900px;
+
+  margin: 24px auto;
+}
+
+.outline-section {
   border: 1px solid var(--color-primary);
   border-radius: 15px;
-  margin: 24px auto;
+  max-width: 900px;
   background-color: var(--bg-dark);
   backdrop-filter: var(--backdrop-blur);
 }
@@ -261,6 +265,37 @@ nav a {
 }
 #about a:hover {
   color: var(--color-primary);
+}
+
+#projects img {
+  height: 300px;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary-transparent);
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#projects .project-card {
+  border: var(--border-width) solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-md);
+  background-color: var(--bg-dark);
+  width: 100%;
+  margin: 0 auto;
+  transition: var(--transition-hover);
+  display: flex;
+  justify-content: space-around;
+}
+#projects .project-card:hover {
+  background-color: var(--bg-overlay);
 }
 
 footer {
