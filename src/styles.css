@@ -115,6 +115,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  margin-bottom: 8vh;
 }
 
 nav ul {
@@ -270,7 +271,7 @@ nav a {
 }
 
 #projects img {
-  height: 300px;
+  height: 25vw;
   border-radius: 5px;
   border: 1px solid var(--color-primary-transparent);
 }
@@ -303,7 +304,7 @@ nav a {
 }
 .project-card p {
   max-width: 600px;
-  font-size: 1.2em;
+  font-size: 1.4vw;
   line-height: 1.6;
 }
 main h2 {
@@ -366,6 +367,17 @@ footer {
 
   .shortcut-links {
     gap: var(--spacing-md);
+  }
+
+  #projects .project-card {
+    flex-direction: column;
+  }
+  #projects .project-card img {
+    height: auto;
+    width: 70%;
+  }
+  #projects .project-card p {
+    font-size: 1.5em;
   }
 }
 
