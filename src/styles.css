@@ -288,13 +288,15 @@ nav a {
 #projects .project-card {
   border: var(--border-width) solid var(--color-primary);
   border-radius: var(--border-radius-sm);
-  padding: var(--spacing-md);
+  padding: 16px 24px 34px;
   background-color: var(--bg-dark);
   width: 100%;
   margin: 0 auto;
   transition: var(--transition-hover);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
 #projects .project-card:hover {
   background-color: #181818;
@@ -303,6 +305,20 @@ nav a {
   max-width: 600px;
   font-size: 1.2em;
   line-height: 1.6;
+}
+main h2 {
+  font-size: 2em;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  border-bottom: var(--border-style);
+  width: fit-content;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  text-decoration: underline;
+  color: var(--color-primary);
 }
 
 footer {
