@@ -348,9 +348,6 @@ main h2 {
   width: fit-content;
 }
 
-h3 {
-}
-
 #footer-end {
   text-align: center;
   padding: var(--spacing-md);
