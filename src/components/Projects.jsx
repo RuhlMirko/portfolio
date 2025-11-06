@@ -26,6 +26,27 @@ export default function Projects() {
               <p>A programmer's take on the classic Hangman game, featuring programming-related vocabulary and terminology.</p>
               <p>This project was a practice to learn how to work with useEffect.</p>
               <p>The most difficult part was using classes conditionally, and update the pressed keys.</p>
+              <footer className='tech-used'>
+                <div className='pill outline'>
+                  <i className="devicon-react-plain shortcut-icon "></i>
+                  React   
+                </div>
+
+                <div className='pill outline'>
+                  <i className="devicon-html5-plain shortcut-icon"></i>
+                  <span>HTML</span>                  
+                </div>
+                
+                <div className='pill outline'>
+                  <i className="devicon-css3-plain shortcut-icon"></i>
+                  <span>CSS</span>                  
+                </div>
+
+                <div className='pill outline'>
+                  <i className="devicon-javascript-plain shortcut-icon"></i>
+                  <span>JavaScript</span>                  
+                </div>
+              </footer>
             </article>            
             <img src={assemBlyImg} alt="Assembly Endgame game project" />
           </a>        
