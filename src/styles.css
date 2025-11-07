@@ -341,7 +341,9 @@ nav a {
 
 .pill {
   display: flex;
+  align-items: center;
   gap: 5px;
+  border-radius: var(--border-radius-sm);
 }
 
 main h2 {
@@ -355,7 +357,8 @@ main h2 {
 #skills article {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6vw;
+  row-gap: 0;
+  column-gap: 2vw;
 }
 #skills section {
   width: 100%;
@@ -381,9 +384,25 @@ main h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--spacing-lg);
+  gap: 16px;
   flex-wrap: wrap;
   margin-bottom: var(--spacing-lg);
+  margin: 2vh 20px 4vh;
+}
+
+#skills .tech-used {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+#skills .pill {
+  padding: 8px 16px;
+  border-width: var(--border-width);
+  border-radius: 15px;
+  flex: 1;
+  background-color: var(--bg-overlay);
+}
+#skills .shortcut-icon {
+  margin-right: 6px;
 }
 
 #footer-end {
