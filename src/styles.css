@@ -57,6 +57,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 80px; /* Offset for anchor links */
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -348,12 +352,47 @@ main h2 {
   width: fit-content;
 }
 
+#skills article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6vw;
+}
+#skills section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2 / 1;
+  background-color: var(--bg-dark);
+}
+#skills h3 {
+  font-size: 3vh;
+  text-align: center;
+  padding: var(--spacing-md) 0 0;
+  color: var(--color-primary);
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
 #footer-end {
   text-align: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) 0 var(--spacing-lg);
   font-size: 0.9em;
   color: var(--color-secondary);
-  background-color: var(--bg-overlay);
+  background: var(--bg-overlay);
+  border-top: var(--border-style);
 }
 
 /* ===== MEDIA QUERIES ===== */

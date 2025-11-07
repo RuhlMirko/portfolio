@@ -1,7 +1,8 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer id="footer-end">
-      <p>&copy; 2024 Mirko Ruhl. All rights reserved.</p>
+      <p>&copy; {currentYear} Mirko Ruhl.</p>
     </footer>
   );
 }

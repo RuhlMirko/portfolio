@@ -42,7 +42,7 @@ export default function Projects() {
               <p>Since the AI boom I always wanted to use it for a project made by me. 
                 This project help me figure out how AI models work under the hood and how to give a sensible and usable response to render into a page.</p>
               <p>The hardest roadblock I had was trying to understand how to translate an AI response into something I could render.</p>
-              <TechUsed tech={['react', 'html5', 'css3', 'javascript', 'python', 'fastapi']}/>
+              <TechUsed tech={['react', 'html5', 'css3', 'javascript', 'python']}/>
             </article>            
             <img src={chefClaudeImg} alt="Project screenshot" />
           </a>
