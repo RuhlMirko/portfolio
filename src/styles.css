@@ -392,17 +392,20 @@ main h2 {
 
 #skills .tech-used {
   font-size: 1.2em;
-  font-weight: 500;
+  max-width: 500px;
 }
 #skills .pill {
   padding: 8px 16px;
-  border-width: var(--border-width);
+  border: none;
   border-radius: 15px;
   flex: 1;
-  background-color: var(--bg-overlay);
+  background-color: var(--color-primary);
+  color: black;
+  font-weight: 600;
 }
 #skills .shortcut-icon {
   margin-right: 6px;
+  color: black;
 }
 
 #footer-end {

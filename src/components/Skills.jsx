@@ -15,7 +15,7 @@ export default function Skills() {
         <section id="backend" className="outline">
           <h3>Backend development</h3>
           <ul>          
-            <TechUsed tech={['python', 'nodejs', 'expressjs', 'azuresqldatabase']} />  
+            <TechUsed tech={['python', 'nodejs', 'express', 'azuresqldatabase', 'supabase']} />  
           </ul>
         </section>
         

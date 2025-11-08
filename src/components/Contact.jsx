@@ -2,7 +2,7 @@ import Shortcut from "./Shortcut";
 
 export default function Contact() {
   return (
-    <section>
+    <section id="contact">
       <h2>Contact Me</h2>
       <Shortcut />      
     </section>

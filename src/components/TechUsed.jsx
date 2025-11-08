@@ -1,7 +1,5 @@
-export default function TechUsed(props) {
+export default function TechUsed(props) { 
   
-  // TODO: make each item text correspond to it's real name eg.: html5==HTML, css3==CSS, javascript==JavaScript, etc.
-
   const techNames = {
     html5: 'HTML',
     css3: 'CSS',
@@ -10,7 +8,7 @@ export default function TechUsed(props) {
     kotlin: 'Kotlin',
     androidstudio: 'Android Studio',
     reactnative: 'React Native',
-    expressjs: 'Express.js',
+    express: 'Express.js',
     azuresqldatabase: 'SQL',
     react: 'React',
     nodejs: 'Node.js',
@@ -18,11 +16,12 @@ export default function TechUsed(props) {
     python: 'Python',
     git: 'Git',
     github: 'GitHub',
-    streamlit: 'Streamlit'
+    streamlit: 'Streamlit',
+    supabase: 'Supabase'
   };
 
   const techPills = props.tech.map((techItem, index) => {
-    const iconVariant = techItem === 'reactnative' ? 'original' : 'plain';
+    const iconVariant = techItem === 'reactnative' || techItem === 'express' ? 'original' : 'plain';
     return (
       <span key={index} className='pill outline'>
           <i className={`devicon-${techItem}-${iconVariant} shortcut-icon`}></i>
