@@ -17,7 +17,7 @@
   --color-secondary: #eee;
   --color-highlight: #3aafdd;
   --color-primary-transparent: rgba(144, 236, 248, 0.3);
-  --bg-dark: #121212;
+  --bg-dark: #12121231;
   /* --bg-overlay: rgba(31, 190, 211, 0.26); */
   --bg-overlay: linear-gradient(
     rgba(11, 175, 197, 0.26),
@@ -30,9 +30,9 @@
   --spacing-xl: 2em;
 
   /* Border Styles */
-  --border-width: 2px;
+  --border-width: 4px;
   --border-style: 1px solid var(--color-primary);
-  --border-radius-sm: 8px;
+  --border-radius-sm: 12px;
   --border-radius-full: 50%;
 
   /* Sizing */
@@ -100,8 +100,9 @@ main section {
 }
 
 .outline {
-  border: 1px solid var(--color-primary);
-  border-radius: 5px;
+  border: solid var(--color-primary);
+  border-width: var(--border-width);
+  border-radius: var(--border-radius-sm);
   width: fit-content;
   padding: 5px 8px;
 }
