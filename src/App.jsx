@@ -13,10 +13,10 @@ function App() {
     <>          
       <Hero />      
       <Header />
-      <main>
-        <About />
+      <main>        
         <Projects />
         <Skills />
+        <About />
         <Contact />
         <Resume />
       </main>        
