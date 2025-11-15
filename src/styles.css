@@ -292,7 +292,6 @@ nav a {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-direction: column;
   gap: var(--spacing-lg);
   flex-wrap: wrap;
   justify-content: center;
@@ -362,7 +361,6 @@ main h2 {
   column-gap: 2vw;
 }
 #skills section {
-  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -382,13 +380,16 @@ main h2 {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: var(--spacing-lg);
   margin: 2vh 20px 4vh;
+  max-width: 600px;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+#skills li {
+  margin: var(--spacing-sm);
 }
 
 #skills .tech-used {
@@ -396,13 +397,14 @@ main h2 {
   max-width: 500px;
 }
 #skills .pill {
-  padding: 8px 16px;
+  padding: 18px 16px;
   border: none;
   border-radius: 15px;
   flex: 1;
   background-color: var(--color-primary);
   color: black;
   font-weight: 600;
+  font-size: 1rem;
 }
 #skills .shortcut-icon {
   margin-right: 6px;
@@ -456,7 +458,13 @@ main h2 {
   .shortcut-links {
     gap: var(--spacing-md);
   }
+}
 
+@media (max-width: 1350px) {
+  #skills article {
+    display: flex;
+    flex-direction: column;
+  }
   #projects .project-card {
     flex-direction: column;
   }

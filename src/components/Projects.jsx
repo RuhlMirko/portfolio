@@ -28,7 +28,11 @@ export default function Projects() {
               <p>A programmer's take on the classic Hangman game, featuring programming-related vocabulary and terminology.</p>
               <p>This project was a practice to learn how to work with useEffect.</p>
               <p>The most difficult part was using classes conditionally, and update the pressed keys.</p>
-              <TechUsed tech={['react', 'html5', 'css3' ,'javascript']}/>
+              <footer>                
+                <TechUsed tech={['react', 'html5', 'css3' ,'javascript']}/>
+              </footer>
+              
+              
             </article>            
             <img src={assemBlyImg} alt="Assembly Endgame game project" />
           </a>        

@@ -23,16 +23,18 @@ export default function TechUsed(props) {
   const techPills = props.tech.map((techItem, index) => {
     const iconVariant = techItem === 'reactnative' || techItem === 'express' ? 'original' : 'plain';
     return (
-      <span key={index} className='pill outline'>
-          <i className={`devicon-${techItem}-${iconVariant} shortcut-icon`}></i>
-          {techNames[techItem]}         
-      </span>
+      <li key={index}>
+        <span className='pill outline'>
+            <i className={`devicon-${techItem}-${iconVariant} shortcut-icon`}></i>
+            {techNames[techItem]}         
+        </span>
+      </li>
     );
   });
 
   return (
-    <footer className='tech-used'>        
+    <ul>        
         {techPills}        
-    </footer>
+    </ul>
   );
 }

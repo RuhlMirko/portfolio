@@ -6,31 +6,23 @@ export default function Skills() {
       <h2>My Skills</h2>
       <article>
         <section id="frontend" className="outline">
-          <h3>Frontend development</h3>
-          <ul>
-            <TechUsed tech={['html5', 'css3', 'javascript', 'typescript', 'react', 'nextjs']} />       
-          </ul>
+          <h3>Frontend development</h3>          
+          <TechUsed tech={['html5', 'css3', 'javascript', 'typescript', 'react', 'nextjs']} />                 
         </section>
 
         <section id="backend" className="outline">
-          <h3>Backend development</h3>
-          <ul>          
-            <TechUsed tech={['python', 'nodejs', 'express', 'azuresqldatabase', 'supabase']} />  
-          </ul>
+          <h3>Backend development</h3>          
+          <TechUsed tech={['python', 'nodejs', 'express', 'azuresqldatabase', 'supabase']} />            
         </section>
         
         <section id="mobile" className="outline">
-            <h3>Mobile development</h3>
-            <ul>
-              <TechUsed tech={['reactnative', 'kotlin', 'androidstudio']} />              
-            </ul>
+            <h3>Mobile development</h3>            
+            <TechUsed tech={['reactnative', 'kotlin', 'androidstudio']} />                          
         </section>
 
         <section id="other" className="outline">
-          <h3>Other Skills</h3>
-          <ul>
-            <TechUsed tech={['git', 'github', 'streamlit']} />
-          </ul>
+          <h3>Other Skills</h3>          
+          <TechUsed tech={['git', 'github', 'streamlit']} />          
         </section>
       </article>
       
