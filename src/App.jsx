@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
+import CallToAction from './components/CallToAction';
 import './styles.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />      
       <Header />
       <main>        
+        <CallToAction />
         <Projects />
         <Skills />
         <About />
