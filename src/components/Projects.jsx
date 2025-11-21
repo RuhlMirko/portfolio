@@ -8,7 +8,7 @@ export default function Projects() {
     <section id="projects">
       <h2>My Projects</h2>
       <ul>
-        <li>
+        <li className='project-item'>
           <a href="" className='project-card'>
             <article className='project-info'>
               <header>
@@ -25,7 +25,7 @@ export default function Projects() {
           </a>          
         </li>
 
-        <li>
+        <li className='project-item'>
           <a href="" className='project-card'>
             <article className='project-info'>
               <header>
@@ -45,7 +45,7 @@ export default function Projects() {
           </a>        
         </li>
 
-        <li>
+        <li className='project-item'>
           <a href="" className='project-card'>
             <article className='project-info'>
               <header>

@@ -88,7 +88,6 @@ section {
 
 main section {
   width: 90%;
-
   margin: 24px auto;
 }
 
@@ -150,7 +149,7 @@ nav li {
 
 nav li:hover {
   border-color: var(--color-highlight);
-  box-shadow: 3px 2px 0 var(--color-highlight);
+  /* box-shadow: 3px 2px 0 var(--color-highlight); */
 }
 
 nav a {
@@ -327,6 +326,11 @@ nav a {
   justify-content: center;
   align-items: center;
 }
+
+.project-item {
+  flex: 1 1 300px;
+}
+
 #projects header {
   display: flex;
   flex-direction: column;
@@ -390,7 +394,6 @@ main h2 {
   margin-bottom: var(--spacing-md);
   color: var(--color-primary);
   border-bottom: var(--border-style);
-  width: fit-content;
 }
 
 #skills article {
@@ -448,6 +451,12 @@ main h2 {
 #skills .shortcut-icon {
   margin-right: 6px;
   color: black;
+}
+
+#contact {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #footer-end {
