@@ -94,9 +94,44 @@ h3 {
 button {
   cursor: pointer;
 }
+.shortcut-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  list-style: none;
+  margin-bottom: 1em;
+}
+.shortcut-links a,
+.shortcut-links button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.shortcut-icon {
+  font-size: 40px;
+  padding: 0.2em;
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+.shortcut-icon:hover {
+  background-color: var(--fg-primary);
+  color: var(--font-primary);
+  border: 2px solid var(--font-primary);
+}
+
 .email-status {
-  display: none;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.2s ease-out;
 }
 .show {
-  display: block;
+  transform: translateX(0);
+  opacity: 1;
 }

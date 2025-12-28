@@ -21,13 +21,13 @@ export default function Shortcut() {
         <div className="shortcut">
         <ul className="shortcut-links">
           <li>
-            <a href="#about" className="button" aria-label="LinkedIn">                   
+            <a href="https://www.linkedin.com/in/mirko-ruhl-730581200" className="button" aria-label="LinkedIn">                   
               <i className="devicon-linkedin-plain shortcut-icon"></i>          
             </a>
           </li>
           
           <li>
-            <a href="#about" className="button" aria-label="GitHub">                   
+            <a href="https://github.com/RuhlMirko" className="button" aria-label="GitHub">                   
               <i className="devicon-github-original shortcut-icon"></i>          
             </a>
           </li>
