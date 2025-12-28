@@ -19,11 +19,11 @@ function App() {
       
         <main>        
           <CallToAction />
-            {/* <Projects />
-            <Skills />
-            <About />
-            <Contact />
-            <Resume /> */}
+            <Projects />
+            {/* <Skills /> */}
+            {/* <About /> */}
+            {/* <Contact /> */}
+            {/* <Resume /> */}
         </main>         
         <Footer />
     </>

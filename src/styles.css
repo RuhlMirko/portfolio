@@ -102,6 +102,11 @@ h3 {
 button {
   cursor: pointer;
 }
+img {
+  max-width: 300px;
+  filter: grayscale(80%) sepia(30%);
+  opacity: 0.8;
+}
 
 #hero {
   margin-top: 6em;
@@ -285,6 +290,62 @@ button:hover {
   font-size: 1.2em;
   max-width: 50ch;
   margin-right: 1em;
+}
+
+.projects {
+  max-width: 1080px;
+  text-align: left;
+}
+
+.projects h3 {
+  margin-top: 0.5em;
+}
+.projects p {
+  max-width: 60ch;
+  font-weight: 600;
+}
+.project-card {
+  padding: 0.2em 1em 2em;
+  background-color: var(--fg-primary);
+  margin: 1em;
+  box-shadow: 0.4em 0.4em 2px #1a1a1a23;
+}
+.projects-container {
+  display: flex;
+  align-items: center;
+  border-left: 8px double var(--font-primary);
+  padding-left: 12px;
+}
+
+.projects-menu {
+  background-color: var(--fg-primary);
+  list-style: none;
+  box-shadow: 0.4em 4px 0 #1a1a1a23;
+  padding: 0.2em 0 1.2em;
+}
+.projects-menu li {
+  padding: 4px 0;
+}
+
+.projects-menu button {
+  width: 100%;
+  background-color: var(--fg-primary);
+  color: var(--font-primary);
+  box-shadow: none;
+  margin: 2px 0;
+  border: none;
+  text-align: left;
+}
+.projects-menu button span {
+  color: var(--fg-secondary);
+}
+.projects-menu button span::before {
+  content: "- ";
+}
+
+.projects-menu button:hover {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
 }
 
 footer {
