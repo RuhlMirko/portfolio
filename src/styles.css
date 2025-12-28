@@ -16,7 +16,7 @@
   --font-primary: rgb(84, 80, 68);
 
   --fg-primary: rgb(252, 248, 204);
-  --fg-secondary: rgb(207, 202, 165);
+  --fg-secondary: rgb(194, 190, 159);
 
   --bg-primary: rgb(105, 102, 83);
 
@@ -69,7 +69,7 @@ a {
 }
 
 section {
-  /* padding-bottom: 2em; */
+  padding-bottom: 2em;
   border-bottom: 2px solid var(--fg-secondary);
 }
 
@@ -112,7 +112,7 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 50%;
+  width: 30%;
   margin: 0 auto;
   list-style: none;
   margin-bottom: 1em;
@@ -136,16 +136,16 @@ button {
 .shortcut-icon {
   font-size: 40px;
   padding: 0.2em;
-  background-color: var(--bg-primary);
-  color: var(--fg-primary);
+  background-color: var(--fg-secondary);
+  color: var(--font-primary);
   transition: 0.2s;
-  border: 2px solid transparent;
+  border: 2px solid var(--font-primary);
   box-shadow: 4px 5px 0 #1a1a1a23;
 }
 .shortcut-icon:hover {
-  background-color: var(--fg-primary);
-  color: var(--font-primary);
-  border: 2px solid var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  border: 2px solid transparent;
 }
 
 .email-status {
@@ -275,8 +275,7 @@ button:hover {
   display: flex;
   justify-content: space-around;
   text-align: left;
-  margin: 3em 0 1em;
-  padding-bottom: 3.5em;
+  padding-block: 3em;
   gap: 1em;
 }
 .cta button {
@@ -286,6 +285,15 @@ button:hover {
   font-size: 1.2em;
   max-width: 50ch;
   margin-right: 1em;
+}
+
+footer {
+  margin-top: 6px;
+  padding: 0.5em 0 1em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: var(--fg-secondary);
+  border-top: 2px solid var(--bg-primary);
 }
 
 /* @media (prefers-color-scheme: dark) {

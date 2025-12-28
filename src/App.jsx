@@ -11,9 +11,12 @@ import './styles.css';
 
 function App() {
   return (
-    <>          
-      <Hero />            
-      <Header /> 
+    <> 
+      <header>
+        <Hero />            
+        <Header />   
+      </header>         
+      
         <main>        
           <CallToAction />
             {/* <Projects />
