@@ -1,6 +1,6 @@
 export default function CallToAction() {
   return (
-    <section id='call-to-action'>   
+    <section id='cta'>   
         <div className="cta-info">
             <h2>Let's Work Together</h2>
             <p>Have a project in mind? I'm available for freelance work and collaborations.</p>

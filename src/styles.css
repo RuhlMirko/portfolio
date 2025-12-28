@@ -50,12 +50,18 @@ body::after {
 }
 
 body {
-  margin: 0;
+  text-align: center;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 2%;
+}
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 a {
@@ -72,6 +78,8 @@ h1 {
   font-size: 4.2em;
   font-family: "Montserrat";
   text-transform: uppercase;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 h1,
@@ -129,9 +137,64 @@ button {
 .email-status {
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.1s ease-out;
 }
 .show {
   transform: translateX(0);
   opacity: 1;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  border-bottom: 2px solid var(--fg-secondary);
+  position: sticky;
+  top: 0;
+  padding-top: 1em;
+  padding-bottom: 0.2em;
+  backdrop-filter: blur(25px);
+  background-color: rgba(227, 220, 188, 0.742);
+  z-index: 4;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 0.5em;
+  border-left: 8px double var(--font-primary);
+}
+nav a {
+  color: var(--font-primary);
+  text-transform: uppercase;
+  background-color: var(--fg-secondary);
+  padding: 0.2em 2em 0.2em 1em;
+  border-left: 4px double #1a1a1a;
+  transition: 0.2s;
+  font-weight: bold;
+}
+nav a:hover {
+  background-color: var(--fg-primary);
+  color: #1a1a1a;
+  box-shadow: 5px 0 5px #1a1a1a23;
+  padding-bottom: 0.8em;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

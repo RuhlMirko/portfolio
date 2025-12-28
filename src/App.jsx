@@ -12,18 +12,17 @@ import './styles.css';
 function App() {
   return (
     <>          
-      <Hero />      
-      {/* 
-        <Header /> 
+      <Hero />            
+      <Header /> 
         <main>        
           <CallToAction />
-          <Projects />
-          <Skills />
-          <About />
-          <Contact />
-          <Resume />
+            {/* <Projects />
+            <Skills />
+            <About />
+            <Contact />
+            <Resume /> */}
         </main>         
-        <Footer /> */}
+        <Footer />
     </>
   );
 }
