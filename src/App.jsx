@@ -13,16 +13,17 @@ function App() {
   return (
     <>          
       <Hero />      
-      <Header />
-      <main>        
-        <CallToAction />
-        <Projects />
-        <Skills />
-        <About />
-        <Contact />
-        <Resume />
-      </main>        
-      <Footer />
+      {/* 
+        <Header /> 
+        <main>        
+          <CallToAction />
+          <Projects />
+          <Skills />
+          <About />
+          <Contact />
+          <Resume />
+        </main>         
+        <Footer /> */}
     </>
   );
 }
