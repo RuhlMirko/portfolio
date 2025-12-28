@@ -80,3 +80,23 @@ h2 {
   line-height: 1.1;
   text-transform: uppercase;
 }
+
+h3 {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  font-weight: 500;
+  letter-spacing: 2px;
+  width: fit-content;
+  margin: 0 auto 0.5em;
+  padding: 0 1em;
+  font-size: 1.6em;
+}
+button {
+  cursor: pointer;
+}
+.email-status {
+  display: none;
+}
+.show {
+  display: block;
+}
