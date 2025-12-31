@@ -52,11 +52,9 @@ body::after {
 body {
   text-align: center;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   padding: 2%;
+  max-width: 1080px;
 }
 #app {
   max-width: 1280px;
@@ -166,7 +164,6 @@ img {
 nav {
   display: flex;
   justify-content: center;
-  width: 100%;
   align-items: center;
   border-bottom: 2px solid var(--fg-secondary);
   position: sticky;

@@ -14,8 +14,8 @@ function App() {
     <> 
       <header>
         <Hero />            
-        <Header />   
-      </header>         
+      </header>
+      <Header />         
       
         <main>        
           <CallToAction />
