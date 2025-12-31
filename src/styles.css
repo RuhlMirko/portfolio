@@ -305,8 +305,8 @@ button:hover {
   box-shadow: 0.4em 0.4em 2px #1a1a1a23;
   width: 100%;
   opacity: 0;
-  transform: translateX(100%);
-  transition: display 0.1s linear, transform 0.45s ease-in-out;
+  transform: translateX(30%);
+  transition: display 0.1s linear;
   position: absolute;
 }
 .active-card {
@@ -321,6 +321,7 @@ button:hover {
   opacity: 1;
   transform: translateX(0);
   position: relative;
+  transition: opacity 0.5s linear, transform 0.45s ease-in-out;
 }
 
 .projects-menu .active-tab {
