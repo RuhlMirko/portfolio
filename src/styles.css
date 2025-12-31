@@ -356,6 +356,49 @@ button:hover {
   width: fit-content;
 }
 
+#about {
+  max-width: 1080px;
+  text-align: left;
+}
+.about-info {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.about-info img {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  border: 4px solid var(--fg-primary);
+  box-shadow: 5px 5px 0 #1a1a1a23;
+  filter: grayscale(40%);
+}
+.about-info div {
+  background-color: var(--fg-primary);
+  box-shadow: 5px 5px 0 #1a1a1a23;
+  padding: 1.2em 1em 2em;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 1em;
+}
+.about-info p {
+  max-width: 60ch;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  font-size: 1.1em;
+}
+.about-info a {
+  color: var(--font-primary);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.about-info a:hover {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  padding: 0 6px 0 3px;
+}
 footer {
   margin-top: 6px;
   padding: 0.5em 0 1em;

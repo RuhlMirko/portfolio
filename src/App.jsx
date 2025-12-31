@@ -21,7 +21,7 @@ function App() {
           <CallToAction />
             <Projects />
             {/* <Skills /> */}
-            {/* <About /> */}
+            <About />
             {/* <Contact /> */}
             {/* <Resume /> */}
         </main>         

@@ -1,5 +1,6 @@
 import { ul } from 'motion/react-client';
 import TechUsed from './TechUsed';
+// import ProjectsMenu from './ProjectsMenu'
 import React from 'react';
 
 export default function Projects() {
@@ -26,7 +27,6 @@ export default function Projects() {
             <li className='hover-slide'><button>Van Life <span>React Router</span></button></li>
             <li className='hover-slide'><button>Tenzies game</button></li>
           </ul>
-          {/* <ProjectMenu /> */}
 
           <div className='project-card'>
             {/* <h3>projectsData.tenzies.title</h3> */}
