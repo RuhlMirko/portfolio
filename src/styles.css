@@ -297,10 +297,6 @@ button:hover {
   text-align: left;
 }
 
-.projects p {
-  max-width: 60ch;
-  font-weight: 600;
-}
 .project-card {
   position: relative;
   padding: 0.2em 1em 2em;
@@ -308,7 +304,19 @@ button:hover {
   margin: 0 0 0 1em;
   box-shadow: 0.4em 0.4em 2px #1a1a1a23;
   width: 100%;
+  display: none;
 }
+.active-card {
+  display: block;
+  text-align: left;
+  max-width: 70ch;
+  font-weight: 600;
+  font-size: 1.2em;
+  width: 700px;
+  min-height: 300px;
+  padding: 3em 1.5em 1em;
+}
+
 .projects-container {
   display: flex;
   align-items: center;

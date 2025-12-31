@@ -1,40 +1,37 @@
 import { ul } from 'motion/react-client';
 import TechUsed from './TechUsed';
-// import ProjectsMenu from './ProjectsMenu'
 import React from 'react';
+import projectData from './data.json'
 
 export default function Projects() {
-  const projects = ['tenzies','vanlife','assembly']
-  const [currProj, setCurrProj] = React.useState(null)
+  const [currProj, setCurrProj] = React.useState(1)  
 
 
-  // const ProjectMenu = projects.map((item)=>{
-  //   return (
-  //     <ul>
-  //       <li className='hover-slide'><button>Tenzies</button></li>
-  //     </ul>
-  //   )
-  // })
+  const toggleProj= (id) => {
+    setCurrProj(id)
+  }
+
+  const projectsElements = projectData.projects.map((curr, index)=>(
+    <div key={index} className={currProj === index ? 'project-card active-card':'project-card '}>
+      <h3 className='project-title'>{curr.title}</h3>
+      <p>{curr.description}</p>
+      <img src={curr.thumbnail} alt="" />
+    </div>)
+  )
 
   return (
     <section id="projects">
       <h2 className='hover-slide'>My Projects</h2>
-      <div className='projects-container'>
-          
+      <div className='projects-container'>          
           <ul className='projects-menu'>
-            <li className='hover-slide'><button>Tenzies game <span>React</span></button></li>
-            <li className='hover-slide'><button>Assembly Endgame <span>React</span></button></li>
-            <li className='hover-slide'><button>Van Life <span>React Router</span></button></li>
-            <li className='hover-slide'><button>Tenzies game</button></li>
+            <li className={currProj === 1 ? 'hover-slide active-tab' : 'hover-slide'}><button onClick={()=>toggleProj(0)}>Tenzies game <span>React</span></button></li>
+            <li className='hover-slide'><button onClick={()=>toggleProj(1)}>Assembly Endgame <span>React</span></button></li>
+            <li className='hover-slide'><button onClick={()=>toggleProj(2)}>Van Life <span>React Router</span></button></li>
+            {/* <li className='hover-slide'><button onClick={()=>toggleProj(4)}>Placeholder</button></li> */}
           </ul>
-
-          <div className='project-card'>
-            {/* <h3>projectsData.tenzies.title</h3> */}
-            <h3 className='project-title'>Tenzies Game</h3>
-            <p>{/* projectsData.tenzies.description*/}</p>
-            {/* <TechUsed tech='html5'/> */}
+          <div>
+            {projectsElements}
           </div>
-
         </div>
     </section>
   );
