@@ -2,15 +2,15 @@
     "projects": [
         {
             "title": "Tenzies",
-            "description": "An interactive dice game where players roll until all dice show the same number. Features a timer and high score tracking with localStorage.In this project I learned how to use React useState hook and persistent data storage. The hardest part was implementing a real-time timer and integrating localStorage for tracking high scores.",
-            "thumbnail": "./projectThumbs/tenzies.png",
+            "description": "An interactive dice game where players roll until all dice show the same number. Features a timer and high score tracking with localStorage.*In this project I learned how to use React useState hook and persistent data storage.*The hardest part was implementing a real-time timer and integrating localStorage for tracking high scores.",
+            "thumbnail": "/projectThumbs/tenzies.png",
             "techStack": ["React", "CSS", "JavaScript"],
             "id":"tenzies"
         },
         {
             "title": "ChefClaude",
-            "description": "A brief description of what this project does and its main features.",
-            "thumbnail": "./projectThumbs/chefClaude.png",
+            "description": "This website gives you a recipe with the ingredients that you want.*Since the Al boom I always wanted to use it for a project made by me. This project help me figure out how Al models work under the hood and how to give a sensible and usable response to render into a page.*The hardest roadblock I had was trying to understand how to translate an Al response into something I could render.",
+            "thumbnail": "/projectThumbs/chefClaude.png",
             "techStack": ["React Router", "JavaScript", "HTML5"],
             "id":"chefclaude"
         },
