@@ -288,6 +288,7 @@ button:hover {
 }
 .cta p {
   font-size: 1.2em;
+  font-weight: 600;
   max-width: 50ch;
   margin-right: 1em;
 }
@@ -295,6 +296,10 @@ button:hover {
 .projects {
   max-width: 1080px;
   text-align: left;
+}
+
+.project-card h3 {
+  padding-top: 3px;
 }
 
 .project-card {
@@ -306,11 +311,13 @@ button:hover {
   width: 100%;
   opacity: 0;
   transform: translateX(30%);
-  transition: display 0.1s linear;
+
   position: absolute;
 }
 .active-card {
-  display: block;
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
   text-align: left;
   max-width: 70ch;
   font-weight: 600;
@@ -321,7 +328,8 @@ button:hover {
   opacity: 1;
   transform: translateX(0);
   position: relative;
-  transition: opacity 0.5s linear, transform 0.45s ease-in-out;
+  transition: display 0.1s linear, opacity 0.5s linear,
+    transform 0.45s ease-in-out;
 }
 
 .projects-menu .active-tab {
@@ -371,12 +379,29 @@ button:hover {
   background-color: var(--bg-primary);
   color: var(--fg-primary);
 }
+
+.project-cards-wrapper {
+  position: relative;
+  width: 700px;
+  min-height: 300px;
+  max-height: 700px;
+}
+
 .project-title {
   position: absolute;
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
+}
+
+.project-thumbnail {
+  margin: 0 auto;
+  width: 170px;
+  border: 1px solid var(--font-primary);
+  margin-right: 0.5em;
+  box-shadow: 5px 5px 0 #1a1a1a23;
+  filter: sepia(0);
 }
 
 #about {
@@ -429,6 +454,7 @@ footer {
   font-weight: 600;
   background: var(--fg-secondary);
   border-top: 2px solid var(--bg-primary);
+  width: 100%;
 }
 
 /* @media (prefers-color-scheme: dark) {

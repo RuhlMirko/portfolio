@@ -18,8 +18,8 @@ export default function Projects() {
   return (
     <div key={index} className={currProj === index ? 'project-card active-card':'project-card '}>
       <h3 className='project-title'>{curr.title}</h3>
-      <p>{curr.description}</p>
-      <img src={curr.thumbnail} alt="" />
+      <img src={new URL(`../assets/projectThumbs/${curr.thumbnail}`, import.meta.url).href} alt="" className='project-thumbnail'/>
+      <p>{curr.description}</p>            
     </div>)
   })
 
@@ -29,11 +29,11 @@ export default function Projects() {
       <div className='projects-container'>          
           <ul className='projects-menu'>
             <li className='hover-slide'><button onClick={()=>toggleProj(0)} className={currProj === 0 ? 'active-tab ':''}>Tenzies game <span>React</span></button></li>
-            <li className='hover-slide'><button onClick={()=>toggleProj(1)} className={currProj === 1 ? 'active-tab ':''}>Assembly Endgame <span>React</span></button></li>
+            <li className='hover-slide'><button onClick={()=>toggleProj(1)} className={currProj === 1 ? 'active-tab ':''}>Chef Claude <span>React</span></button></li>
             <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 2 ? 'active-tab ':''}>Van Life <span>React Router</span></button></li>
             {/* <li className='hover-slide'><button onClick={()=>toggleProj(4)}>Placeholder</button></li> */}
           </ul>
-          <div>
+          <div className='project-cards-wrapper'>
             {projectsElements}
           </div>
         </div>
