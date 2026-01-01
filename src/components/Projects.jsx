@@ -4,7 +4,7 @@ import React from 'react';
 import projectData from './data.json'
 
 export default function Projects() {
-  const [currProj, setCurrProj] = React.useState(1)  
+  const [currProj, setCurrProj] = React.useState(0)  
 
 
   const toggleProj= (id) => {
@@ -12,14 +12,11 @@ export default function Projects() {
   }
 
   const projectsElements = projectData.projects.map((curr, index)=>{
-  const sansanitized = curr.description.split('*').join('')
-
-
   return (
     <div key={index} className={currProj === index ? 'project-card active-card':'project-card '}>
       <h3 className='project-title'>{curr.title}</h3>
       <img src={new URL(`../assets/projectThumbs/${curr.thumbnail}`, import.meta.url).href} alt="" className='project-thumbnail'/>
-      <p>{curr.description}</p>            
+      <p>{curr.description.split('*').map((paragraph)=>(<p>{paragraph}</p>))}</p>
     </div>)
   })
 
@@ -30,8 +27,7 @@ export default function Projects() {
           <ul className='projects-menu'>
             <li className='hover-slide'><button onClick={()=>toggleProj(0)} className={currProj === 0 ? 'active-tab ':''}>Tenzies game <span>React</span></button></li>
             <li className='hover-slide'><button onClick={()=>toggleProj(1)} className={currProj === 1 ? 'active-tab ':''}>Chef Claude <span>React</span></button></li>
-            <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 2 ? 'active-tab ':''}>Van Life <span>React Router</span></button></li>
-            {/* <li className='hover-slide'><button onClick={()=>toggleProj(4)}>Placeholder</button></li> */}
+            <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 2 ? 'active-tab ':''}>Van Life <span>React Router</span></button></li>            
           </ul>
           <div className='project-cards-wrapper'>
             {projectsElements}
