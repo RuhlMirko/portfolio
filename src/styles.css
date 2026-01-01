@@ -355,8 +355,23 @@ button:hover {
   width: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 350px;
+  height: 400px;
 }
+
+.projects-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.projects-menu::-webkit-scrollbar-thumb {
+  background-color: var(--font-primary);
+  border-radius: 50px;
+}
+
+.projects-menu::-webkit-scrollbar-track {
+  background-color: var(--fg-primary);
+  margin-block: 3px;
+}
+
 .projects-menu li {
   padding: 4px 0;
 }
