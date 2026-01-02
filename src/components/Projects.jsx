@@ -31,7 +31,7 @@ export default function Projects() {
             <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 3 ? 'active-tab ':''}>Components Library <span>React</span></button></li>            
             <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 4 ? 'active-tab ':''}>Assembly Endgame<span>React</span></button></li>            
             <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 5 ? 'active-tab ':''}>Basketball Timer<span>React Router</span></button></li>            
-            <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 2 ? 'active-tab ':''}>Van Life <span>React Router</span></button></li>            
+            <li className='hover-slide'><button onClick={()=>toggleProj(2)} className={currProj === 6 ? 'active-tab ':''}>Van Life <span>React Router</span></button></li>            
           </ul>
           <div className='project-cards-wrapper'>
             {projectsElements}

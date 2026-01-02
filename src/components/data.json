@@ -17,7 +17,7 @@
         {
             "title": "Van Life",
             "description": "A brief description of what this project does and its main features.",
-            "thumbnail": "project-three.jpg",
+            "thumbnail": "VanLife.png",
             "techStack": ["React Router", "React", "HTML5"],
             "id":"vanlife"
         }
