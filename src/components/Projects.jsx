@@ -16,7 +16,10 @@ export default function Projects() {
     <div key={index} className={currProj === index ? 'project-card active-card':'project-card '}>
       <h3 className='project-title'>{curr.title}</h3>
       <img src={new URL(`../assets/projectThumbs/${curr.thumbnail}`, import.meta.url).href} alt="" className='project-thumbnail'/>
-      <p>{curr.description.split('*').map((paragraph)=>(<p>{paragraph}</p>))}</p>
+      <div className='project-description'>
+        <TechUsed tech={curr.techStack}/>
+        {curr.description.split('*').map((paragraph)=>(<p>{paragraph}</p>))}
+      </div>
     </div>)
   })
 

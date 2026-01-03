@@ -333,6 +333,10 @@ button:hover {
   line-height: 1.2;
 }
 
+.project-description {
+  overflow-y: scroll;
+}
+
 .projects-menu .active-tab {
   background-color: var(--bg-primary);
   color: var(--fg-primary);
@@ -363,13 +367,12 @@ button:hover {
   max-height: 500px;
 }
 
+.project-description::-webkit-scrollbar,
 .projects-menu::-webkit-scrollbar {
   width: 5px;
 }
-.projects-menu::-webkit-scrollbar:hover {
-  width: 8px;
-}
 
+.project-description::-webkit-scrollbar-thumb,
 .projects-menu::-webkit-scrollbar-thumb {
   background-color: #1a1a1a23;
   border-radius: 50px;
@@ -379,6 +382,7 @@ button:hover {
   border-radius: 50px;
 }
 
+.project-description::-webkit-scrollbar-track,
 .projects-menu::-webkit-scrollbar-track {
   background-color: var(--fg-primary);
   margin-block: 3px;
@@ -435,6 +439,18 @@ button:hover {
   border-radius: 5px;
   object-fit: cover;
   object-position: top;
+}
+
+.techstack-ul {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 1em;
+  list-style-type: none;
+}
+
+.techstack-ul li i {
+  height: 40px;
 }
 
 #about {

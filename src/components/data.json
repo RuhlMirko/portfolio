@@ -2,21 +2,21 @@
     "projects": [
         {
             "title": "Tenzies",
-            "description": "An interactive dice game where players roll until all dice show the same number. Features a timer and high score tracking with localStorage.*In this project I learned how to use React useState hook and persistent data storage.*The hardest part was implementing a real-time timer and integrating localStorage for tracking high scores.",
+            "description": "An interactive dice game built with React where players roll until all dice show the same number. Implements real-time timer functionality and persistent high score tracking using localStorage and React hooks.*This project deepened my understanding of React's useState and useEffect hooks for managing game state and side effects. I learned to implement browser storage APIs for data persistence across sessions.*The main challenge was synchronizing the timer with game state updates and ensuring localStorage operations didn't cause performance issues or bugs when rapidly clicking the roll button.",
             "thumbnail": "tenzies.png",
             "techStack": ["React", "CSS", "JavaScript"],
             "id":"tenzies"
         },
         {
             "title": "ChefClaude",
-            "description": "This website gives you a recipe with the ingredients that you want.*Since the AI boom I always wanted to use it for a project made by me. This project help me figure out how Al models work under the hood and how to give a sensible and usable response to render into a page.*The hardest roadblock I had was trying to understand how to translate an Al response into something I could render.",
+            "description": "A recipe generator web app that uses AI to create custom recipes based on user-provided ingredients. Integrates with an AI API to process natural language responses and render them as structured recipe content.*Working with AI APIs taught me how to craft effective prompts, handle streaming responses, and parse unstructured text data into React components. I gained experience managing asynchronous API calls and implementing error handling for external service dependencies.*The biggest challenge was parsing the AI's free-form text responses into a consistent, renderable format. I had to implement robust text parsing logic to extract recipe steps, ingredients, and cooking times from varied response structures, while handling edge cases where the AI returned unexpected formats.",
             "thumbnail": "chefClaude.png",
             "techStack": ["React Router", "JavaScript", "HTML5"],
             "id":"chefclaude"
         },
         {
             "title": "Van Life",
-            "description": "A brief description of what this project does and its main features.",
+            "description": "This landing page was made to practice how to use React Router.*",
             "thumbnail": "VanLife.png",
             "techStack": ["React Router", "React", "HTML5"],
             "id":"vanlife"

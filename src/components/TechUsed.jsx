@@ -33,7 +33,7 @@ export default function TechUsed(props) {
   });
 
   return (
-    <ul>        
+    <ul className="techstack-ul">        
         {techPills}        
     </ul>
   );
