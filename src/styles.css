@@ -335,6 +335,8 @@ button:hover {
 
 .project-description {
   overflow-y: scroll;
+  max-width: 60ch;
+  padding-right: 1em;
 }
 
 .projects-menu .active-tab {
@@ -442,6 +444,7 @@ button:hover {
 }
 
 .techstack-ul {
+  margin-top: 15px;
   display: flex;
   width: 100%;
   justify-content: start;
@@ -449,8 +452,24 @@ button:hover {
   list-style-type: none;
 }
 
+.pill {
+  border: 1px solid #1a1a1a23;
+  padding: 2px 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0 #1a1a1a23;
+}
+.pill:hover {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+}
+
 .techstack-ul li i {
-  height: 40px;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 #about {
