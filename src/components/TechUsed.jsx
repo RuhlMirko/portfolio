@@ -24,8 +24,8 @@ export default function TechUsed(props) {
     const iconVariant = techItem === 'reactnative' || techItem === 'express' ? 'original' : 'plain';
     return (
       <li key={index}>
-        <span className='pill outline'>
-            <i className={`devicon-${techItem}-${iconVariant} shortcut-icon`}></i>
+        <span className='pill'>
+            <i className={`devicon-${techItem}-${iconVariant} `}></i>
             {techNames[techItem]}         
         </span>
       </li>

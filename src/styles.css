@@ -432,7 +432,6 @@ button:hover {
 
 .project-thumbnail {
   margin: 0 auto;
-  width: 170px;
   border: 1px solid var(--font-primary);
   box-shadow: 5px 5px 0 #1a1a1a23;
   filter: sepia(0);
@@ -441,28 +440,61 @@ button:hover {
   border-radius: 5px;
   object-fit: cover;
   object-position: top;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: relative;
 }
 
 .techstack-ul {
   margin-top: 15px;
+  margin-bottom: 10px;
   display: flex;
-  width: 100%;
+  width: fit-content;
   justify-content: start;
   gap: 1em;
   list-style-type: none;
+  position: absolute;
+  top: 38%;
+  background-color: #1a1a1a23;
+  backdrop-filter: blur(5px);
+  padding: 8px;
+}
+.techstack-ul::before {
+  content: "Tech Stack";
+  position: absolute;
+  top: -31px;
+  left: 0;
+  background-color: #1a1a1a23;
+  padding: 2px 20px 0;
+  backdrop-filter: blur(5px);
 }
 
 .pill {
-  border: 1px solid #1a1a1a23;
-  padding: 2px 0.5em;
+  border: 1px solid transparent;
+  padding: 2px 0.7em 2px 0.5em;
   display: flex;
+  gap: 5px;
   align-items: center;
-  justify-content: center;
-  box-shadow: 2px 2px 0 #1a1a1a23;
-}
-.pill:hover {
+  justify-content: space-between;
+  box-shadow: 3px 2px 0 #1a1a1a23;
+
+  transition: 0.2s;
+  font-weight: 700;
   background-color: var(--bg-primary);
   color: var(--fg-primary);
+}
+.pill:hover {
+  background-color: var(--fg-primary);
+  color: var(--font-primary);
+  border-color: #1a1a1a;
 }
 
 .techstack-ul li i {
