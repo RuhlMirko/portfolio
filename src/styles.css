@@ -53,7 +53,7 @@ body {
   text-align: center;
   margin: 0 auto;
   min-height: 100vh;
-  max-width: 1080px;
+  /* max-width: 1080px; */
 }
 #app {
   max-width: 1280px;
@@ -290,12 +290,8 @@ button:hover {
 }
 
 .projects {
-  max-width: 1080px;
+  max-width: 1280px;
   text-align: left;
-}
-
-.project-card h3 {
-  padding-top: 3px;
 }
 
 .project-card {
@@ -318,9 +314,9 @@ button:hover {
   max-width: 70ch;
   font-weight: 600;
   font-size: 1.2em;
-  width: 700px;
+  width: 100%;
   min-height: 300px;
-  padding: 3em 1.5em 1em;
+  padding: 0.7em 1.5em 1em;
   opacity: 1;
   transform: translateX(0);
   position: relative;
@@ -331,6 +327,14 @@ button:hover {
   margin-top: 6px;
   margin-bottom: 8px;
   line-height: 1.2;
+  max-width: 50ch;
+}
+
+.project-content {
+  display: flex;
+  overflow: hidden;
+  border-block: 2px solid #12121223;
+  padding: 1em 0;
 }
 
 .project-description {
@@ -347,6 +351,7 @@ button:hover {
 .projects-container {
   display: flex;
   align-items: start;
+  justify-content: center;
   border-left: 8px double var(--font-primary);
   padding-left: 12px;
   margin-top: 1.5em;
@@ -423,11 +428,12 @@ button:hover {
 }
 
 .project-title {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
+  width: 100%;
+  background-color: var(--fg-secondary);
+  color: var(--font-primary);
+  font-weight: 600;
+  margin: 0;
+  border-left: 6px double black;
 }
 
 .project-thumbnail {
@@ -435,46 +441,38 @@ button:hover {
   border: 1px solid var(--font-primary);
   box-shadow: 5px 5px 0 #1a1a1a23;
   filter: sepia(0);
-  height: 200px;
-  width: 100%;
+  height: 300px;
+  aspect-ratio: 1/1;
+  width: 250px;
+  margin-right: 1em;
   border-radius: 5px;
   object-fit: cover;
   object-position: top;
-  mask-image: linear-gradient(
-    to bottom,
+  /* mask-image: linear-gradient(
+    to right,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-image: linear-gradient(
-    to bottom,
+    to right,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
-  );
+  ); */
   position: relative;
 }
 
 .techstack-ul {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
   width: fit-content;
-  justify-content: start;
+  flex-wrap: wrap;
   gap: 1em;
   list-style-type: none;
-  position: absolute;
-  top: 38%;
   background-color: #1a1a1a23;
   backdrop-filter: blur(5px);
   padding: 8px;
-}
-.techstack-ul::before {
-  content: "Tech Stack";
-  position: absolute;
-  top: -31px;
-  left: 0;
-  background-color: #1a1a1a23;
-  padding: 2px 20px 0;
-  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
 }
 
 .pill {
