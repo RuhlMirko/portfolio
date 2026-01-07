@@ -30,7 +30,7 @@ export default function Projects() {
 
   return (
     <section id="projects">
-      <h2 className='hover-slide'>My Projects</h2>
+      <h2 className='hover-slide section-title' >My Projects</h2>
       <div className='projects-container'>          
           <ul className='projects-menu'>
             <li className='hover-slide'><button onClick={()=>toggleProj(0)} className={currProj === 0 ? 'active-tab ':''}>Tenzies game <span>React</span></button></li>

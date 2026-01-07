@@ -2,7 +2,7 @@ import pfp from '../assets/pfp.jpg';
 
 export default function About() {
   return (
-    <section id='about' className="outline-section">
+    <section id='about' className="outline-section section-title">
       <h2 className="hover-slide">Welcome to My Portfolio</h2>
       <div className='about-info'>
         <img src={pfp} alt="Profile picture" />
