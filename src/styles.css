@@ -587,7 +587,7 @@ footer {
   margin-bottom: 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     color: rgb(204, 204, 204);
@@ -600,7 +600,7 @@ footer {
       rgb(16, 16, 18) 100%
     );
 
-    --font-primary: rgb(195, 202, 216);
+    --font-primary: rgb(233, 237, 247);
 
     --fg-primary: rgb(49, 53, 70);
     --fg-secondary: rgb(121, 134, 161);
@@ -642,4 +642,4 @@ footer {
   .projects-menu button:hover {
     color: white;
   }
-}
+} */
