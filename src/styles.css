@@ -445,6 +445,20 @@ button:hover {
   border-left: 6px double black;
 }
 
+.project-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  & a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    font-style: italic;
+  }
+}
+
 .project-thumbnail {
   margin: 0 auto;
   border: 1px solid var(--font-primary);
@@ -473,11 +487,11 @@ button:hover {
 .techstack-ul {
   margin-bottom: 15px;
   display: flex;
-  width: fit-content;
+  width: 100%;
   flex-wrap: wrap;
   gap: 1em;
   list-style-type: none;
-  background-color: #1a1a1a23;
+  background-color: rgba(194, 190, 159, 0.5);
   backdrop-filter: blur(5px);
   padding: 8px;
   position: sticky;
