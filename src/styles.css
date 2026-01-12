@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: rgb(84, 80, 68);
   background: #cfc9b2;
   background: linear-gradient(
@@ -236,7 +236,7 @@ h2 {
   height: 2px;
   background-color: #1a1a1a85;
   transform: translateX(-105%);
-  transition: transform 0.4s ease-out;
+  transition: transform 0.2s ease-in;
 }
 .hover-slide::after {
   content: "";
@@ -587,15 +587,59 @@ footer {
   margin-bottom: 0;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color-scheme: dark;
+    color: rgb(204, 204, 204);
+    background: rgb(16, 16, 18);
+    background: linear-gradient(
+      90deg,
+      rgb(16, 16, 18) 0%,
+      rgb(26, 25, 28) 15%,
+      rgb(26, 25, 28) 85%,
+      rgb(16, 16, 18) 100%
+    );
+
+    --font-primary: rgb(195, 202, 216);
+
+    --fg-primary: rgb(49, 53, 70);
+    --fg-secondary: rgb(121, 134, 161);
+
+    --bg-primary: rgb(105, 107, 141);
   }
-  a:hover {
-    color: #747bff;
+
+  nav {
+    background-color: rgba(127, 149, 165, 0.315);
   }
-  button {
-    background-color: #f9f9f9;
+
+  .hover-slide::after {
+    background-color: rgba(105, 107, 141, 0.822);
   }
-} */
+  .hover-slide::before {
+    background-color: rgba(105, 107, 141, 0.822);
+  }
+
+  nav a:hover {
+    color: var(--font-primary);
+  }
+
+  .cta button {
+    color: var(--font-primary);
+  }
+  .cta button:hover {
+    border-color: var(--fg-secondary);
+  }
+  .techstack-ul {
+    background-color: rgba(159, 166, 194, 0.5);
+  }
+  .project-menu button {
+    color: var(--fg-secondary);
+  }
+
+  .projects-menu .active-tab {
+    color: var(--font-primary);
+  }
+  .projects-menu button:hover {
+    color: white;
+  }
+}
