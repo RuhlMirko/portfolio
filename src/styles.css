@@ -426,12 +426,15 @@ button:hover {
   border: none;
   text-align: left;
 }
-.projects-menu button span {
-  color: var(--fg-secondary);
-  font-size: 0.8em;
-}
-.projects-menu button span::before {
-  content: "- ";
+.projects-menu .project-menu-lbl {
+  text-align: left;
+  padding-left: 0.7em;
+  margin-left: 0.2em;
+  margin-bottom: 0;
+  /* background-color: var(--fg-secondary); */
+  border-bottom: 2px solid #12121223;
+  color: #1a1a1a70;
+  font-style: italic;
 }
 
 .projects-menu button:hover {
