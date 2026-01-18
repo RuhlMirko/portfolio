@@ -1,6 +1,6 @@
 :root {
-  font-family: "Nunito", monospace, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family:
+    "Nunito", monospace, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -156,7 +156,9 @@ img {
 .email-status {
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 0.2s ease-out, opacity 0.1s ease-out;
+  transition:
+    transform 0.2s ease-out,
+    opacity 0.1s ease-out;
 }
 .show {
   transform: translateX(0);
@@ -335,7 +337,9 @@ button:hover {
   opacity: 1;
   transform: translateX(0);
   position: relative;
-  transition: display 0.1s linear, opacity 0.5s linear,
+  transition:
+    display 0.1s linear,
+    opacity 0.5s linear,
     transform 0.45s ease-in-out;
 }
 .active-card p {
@@ -396,19 +400,25 @@ button:hover {
 .projects-menu::-webkit-scrollbar {
   width: 5px;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
 .project-description::-webkit-scrollbar-thumb,
-.projects-menu::-webkit-scrollbar-thumb {
-  background-color: #1a1a1a23;
+.projects-menu::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background-color: #1a1a1a6e;
   border-radius: 50px;
 }
-.projects-menu::-webkit-scrollbar-thumb:hover {
+.projects-menu::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
   background-color: #1a1a1a50;
   border-radius: 50px;
 }
 
 .project-description::-webkit-scrollbar-track,
-.projects-menu::-webkit-scrollbar-track {
+.projects-menu::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
   background-color: var(--fg-primary);
   margin-block: 3px;
 }
