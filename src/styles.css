@@ -249,8 +249,8 @@ h2 {
   width: 100%;
   height: 2px;
   background-color: #1a1a1a85;
-  transform: translateX(105%);
-  transition: transform 0.2s ease-out;
+  transform: translateX(-105%);
+  transition: transform 0.2s ease-in;
 }
 .hover-slide:hover::after {
   transform: translateX(0);
@@ -432,16 +432,14 @@ button:hover {
   background-color: var(--fg-primary);
   color: var(--font-primary);
   box-shadow: none;
-  margin: 2px 0;
+  margin: 0;
   border: none;
   text-align: left;
 }
 .projects-menu .project-menu-lbl {
   text-align: left;
   padding-left: 0.7em;
-  margin-left: 0.2em;
   margin-bottom: 0;
-  /* background-color: var(--fg-secondary); */
   border-bottom: 2px solid #12121223;
   color: #1a1a1a70;
   font-style: italic;
