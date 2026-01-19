@@ -16,7 +16,7 @@
         },
         {
             "title": "Van Life",
-            "description": "This landing page was made to practice how to use React Router.*",
+            "description": "A van rental browsing app built with React Router for multi-page navigation, featuring protected routes, active link styling, and dynamic filtering. *This project taught me how to structure complex routing hierarchies, implement route protection for authenticated content, and manage filter state across nested routes. I gained hands-on experience with React Router's useParams and useLoaderData hooks for data fetching and URL synchronization.*The main challenge was keeping filter state synchronized when navigating between routes—filtered results would reset when users returned to pages. I solved this by lifting state up and using URL search parameters to persist filters, which also made the app more shareable since filtered states could be bookmarked.",
             "thumbnail": "VanLife.png",
             "techStack": ["react", "html5"],
             "id":"vanlife"
