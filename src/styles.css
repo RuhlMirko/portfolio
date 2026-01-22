@@ -599,6 +599,71 @@ footer {
   margin-bottom: 0;
 }
 
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 1025px) {
+  .email-status {
+    display: none;
+  }
+  body {
+    padding: 0;
+  }
+  nav {
+    position: relative;
+    background: none;
+    border: none;
+  }
+  .nav-toggle {
+    display: block;
+    position: sticky;
+    top: 0;
+    right: 4vw;
+    height: 6vw;
+    aspect-ratio: 1/1;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+  }
+
+  .projects-menu {
+    display: none;
+  }
+  .active-card {
+    width: 100%;
+  }
+  .project-card {
+    display: block;
+  }
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    border-left: none;
+    padding: 0;
+    border: 6px double #1a1a1a23;
+    padding-block: 1em;
+  }
+  .project-card {
+    opacity: 1;
+    margin: 1em 0;
+    transform: translate(0);
+    position: inherit;
+  }
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
