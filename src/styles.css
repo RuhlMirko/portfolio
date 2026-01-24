@@ -75,7 +75,7 @@ section {
 
 h1 {
   margin-top: 1em;
-  font-size: 4.2em;
+  font-size: 5.2em;
   font-family: "Montserrat";
   text-transform: uppercase;
   width: fit-content;
@@ -97,7 +97,7 @@ h3 {
   width: fit-content;
   margin: 0 auto 0.5em;
   padding: 0 1em;
-  font-size: 1.6em;
+  font-size: 1.9em;
 }
 button {
   cursor: pointer;
@@ -108,8 +108,8 @@ img {
 }
 
 #hero {
-  margin-top: 27vh;
-  margin-bottom: 4em;
+  margin-top: 30vh;
+  margin-bottom: 12vh;
 }
 
 .shortcut-links {
@@ -167,6 +167,7 @@ img {
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 nav {
   position: fixed;
@@ -196,11 +197,11 @@ nav {
 }
 
 .nav-links a {
-  color: var(--font-primary);
+  color: #1a1a1a;
   text-transform: uppercase;
   background-color: var(--fg-secondary);
-  padding: 0.2em 2em 0.2em 1em;
-  border-left: 4px double #1a1a1a;
+  padding: 0.2em 2em 0.2em 0.7em;
+  border-left: 6px double #1a1a1a;
   transition: 0.2s;
   font-weight: bold;
 }
@@ -295,8 +296,9 @@ button:hover {
   margin: 0 auto;
   padding-inline: 5vw;
   background: #12121223;
-  margin-bottom: 1em;
+  margin-bottom: 12vh;
   border-left: 12px double #12121250;
+  box-shadow: 6px 5px 5px #1a1a1a33;
 }
 .cta button {
   margin-right: 1em;
@@ -623,15 +625,13 @@ footer {
     padding: 0;
   }
   nav {
-    position: relative;
     background: none;
     border: none;
+    top: 0;
+    right: 0;
   }
   .nav-toggle {
     display: block;
-    position: sticky;
-    top: 0;
-    right: 4vw;
     height: 6vw;
     aspect-ratio: 1/1;
   }
@@ -640,12 +640,22 @@ footer {
     display: none;
   }
 
-  .nav-links.active {
-    display: flex;
+  .cta {
+    font-size: 1.5em;
+    width: 90%;
+  }
+  .cta h2 {
+    font-size: 3.5vw;
+  }
+  #hero {
+    font-size: 1.5em;
+  }
+  .shortcut-links {
+    width: 40%;
   }
 
-  .nav-links li {
-    padding: 1rem 0;
+  .shortcut-links i {
+    font-size: 6vw;
   }
 
   .projects-menu {
@@ -656,7 +666,22 @@ footer {
   }
   .project-card {
     display: block;
+    text-align: left;
+    padding: 0;
   }
+  .project-card img {
+    margin-left: 1em;
+    height: 300px;
+  }
+  .active-card {
+    max-height: none;
+  }
+
+  .project-card p {
+    font-size: 3vw;
+    max-width: 40ch;
+  }
+
   .projects-container {
     display: flex;
     flex-direction: column;
@@ -665,14 +690,28 @@ footer {
     overflow: auto;
     border-left: none;
     padding: 0;
-    border: 6px double #1a1a1a23;
-    padding-block: 1em;
+    border-block: 6px double #1a1a1a23;
+    margin: 1em;
   }
   .project-card {
     opacity: 1;
     margin: 1em 0;
     transform: translate(0);
     position: inherit;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 1em;
+  }
+
+  .project-card h3 {
+    font-size: 6vw;
+    border-width: 25px;
+    border-color: var(--font-primary);
   }
 }
 
