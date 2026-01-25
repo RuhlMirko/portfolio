@@ -168,6 +168,8 @@ img {
 body {
   position: relative;
   overflow-x: hidden;
+  max-width: 1280px;
+  width: 90%;
 }
 nav {
   position: fixed;
@@ -183,7 +185,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 1.3em;
+  padding-top: 1em;
   padding-bottom: 0.7em;
   backdrop-filter: blur(25px);
   background-color: rgba(227, 220, 188, 0.742);
@@ -201,7 +203,7 @@ nav {
   text-transform: uppercase;
   background-color: var(--fg-secondary);
   padding: 0.2em 2em 0.2em 0.7em;
-  border-left: 6px double #1a1a1a;
+  border-left: 7px double #1a1a1a90;
   transition: 0.2s;
   font-weight: bold;
 }
@@ -316,8 +318,10 @@ button:hover {
   margin-right: 1em;
 }
 
+.cta h2,
 .section-title {
-  margin-inline: 6vw;
+  /* margin-inline: 6vw; */
+  border-bottom: 2px solid #12121223;
 }
 
 .projects {
@@ -562,7 +566,13 @@ button:hover {
 #about {
   max-width: 1080px;
   text-align: left;
+  margin: 0 auto;
 }
+
+#about h2 {
+  border-bottom: 2px solid #12121223;
+}
+
 .about-info {
   display: flex;
   align-items: start;
@@ -582,7 +592,7 @@ button:hover {
   padding: 1.2em 1em 2em;
   font-weight: 600;
   display: inline-block;
-  margin-left: 1em;
+  margin-right: 1em;
 }
 .about-info p {
   max-width: 60ch;
@@ -730,14 +740,18 @@ footer {
 
     --font-primary: rgb(233, 237, 247);
 
-    --fg-primary: rgb(49, 53, 70);
-    --fg-secondary: rgb(121, 134, 161);
+    --fg-primary: rgb(103, 127, 136);
+    --fg-secondary: rgb(134, 150, 160);
 
-    --bg-primary: rgb(105, 107, 141);
+    --bg-primary: rgb(105, 140, 141);
   }
 
-  nav {
+  .nav-links {
     background-color: rgba(127, 149, 165, 0.315);
+  }
+  .nav-links a {
+    color: var(--font-primary);
+    border-color: var(--fg-primary);
   }
 
   .hover-slide::after {

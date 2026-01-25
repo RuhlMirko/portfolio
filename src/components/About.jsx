@@ -4,8 +4,7 @@ export default function About() {
   return (
     <section id='about' className="outline-section section-title">
       <h2 className="hover-slide">Welcome to My Portfolio</h2>
-      <div className='about-info'>
-        <img src={pfp} alt="Profile picture" />
+      <div className='about-info'>        
         <div>
           <p>
           Full Stack Developer with experience building modern web applications. I specialize in creating intuitive user experiences with a strong focus on design and accessibility.
@@ -20,7 +19,7 @@ export default function About() {
             I stay up to date with the latest best practices in web development and design, ensuring my projects are both modern and efficient. I actively seek new challenges and opportunities to grow as a developer and designer, and I'm confident my skills and passion will make a positive impact on any project.
           </p>
         </div>
-        
+        <img src={pfp} alt="Profile picture" />
       </div>      
     </section>
   );
