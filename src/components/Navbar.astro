@@ -25,23 +25,34 @@
     /* background: #222; */
     background: var(--glass-bg);
     padding: 0.5em 1.5em;
-    border: 2px solid #111;
+    border: 1px solid #505050;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #111;
     letter-spacing: 2px;
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
+    transition: 0.2s;
+    animation: reveal-nav 0.45s ease-out forwards;
   }
 
   .nav-links a:hover {
-    background: #414141;
-    transform: translateY(-2px);
+    background: var(--glass-bg-secondary);
+    transform: translateY(-4px);
     box-shadow: 4px 4px 10px #111;
+    padding-inline: 2rem;
   }
   nav {
     /* margin-block: 1rem 2rem; */
     width: 70%;
     margin: 1rem auto 2rem;
+  }
+
+  @keyframes reveal-nav {
+    from {
+      opacity: 0;
+      transform: translateY(-14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
