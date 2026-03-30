@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "title": "Project Title",
+            "thumbnail": "path/to/thumbnail.jpg",
+            "description": "Project description",
+            "tech":["react","javascript","node.js"]
+        },
+        {
+            "title": "Another Project",
+            "thumbnail": "path/to/another-thumbnail.jpg",
+            "description": "Another project description",
+            "tech":["astro","typescript"]
+        }
+    ]
+}

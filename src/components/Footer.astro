@@ -1,0 +1,29 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <h3>© Mirko Joel Ruhl - {currentYear}</h3>
+  <p>Made with Astro - <a href="">view code</a></p>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    background: #121212;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  h3 {
+    padding-top: 12px;
+    color: #9c9a9a;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: "Nunito";
+    border-top: 1px solid var(--faint-border);
+  }
+  a {
+    color: #818181;
+  }
+</style>

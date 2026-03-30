@@ -1,28 +1,58 @@
+---
+import * as Icons from "simple-icons";
+import projects from "../data/projects.json";
+
+// Map tech names to simple-icons keys
+const iconMap: Record<string, any> = {
+  react: Icons.siReact,
+  javascript: Icons.siJavascript,
+  "node.js": Icons.siNodedotjs,
+  astro: Icons.siAstro,
+  typescript: Icons.siTypescript,
+};
+---
+
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects-container">
-    <div class="card">
-      <header>
-        <img src="" alt="" />
-        <h3>Title</h3>
-      </header>
-      <main>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          consectetur ipsa vero cum maiores, nobis molestiae sit ex alias iste!
-        </p>
-        <ul class="tech-stack">
-          <li>React</li>
-          <li>JavaScript</li>
-          <li>Node</li>
-          <li>Astro</li>
-        </ul>
-      </main>
-      <footer>
-        <a href="">Live demo</a>
-        <a href="">View code</a>
-      </footer>
-    </div>
+    {
+      projects.projects.map((project) => (
+        <div class="card">
+          <header>
+            <img src={project.thumbnail} alt={project.title} />
+            <h3>{project.title}</h3>
+          </header>
+          <main>
+            <p>{project.description}</p>
+            <ul class="tech-stack">
+              {project.tech.map((tech) => {
+                const icon = iconMap[tech];
+                return icon ? (
+                  <li>
+                    <span class="tech-pill">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                      >
+                        <path d={icon.path} fill="currentColor" />
+                      </svg>
+                      {icon.title}
+                    </span>
+                  </li>
+                ) : null;
+              })}
+            </ul>
+          </main>
+          <footer>
+            <a href="">Live demo</a>
+            <a href="">View code</a>
+          </footer>
+        </div>
+      ))
+    }
   </div>
 </section>
 <style>
@@ -33,12 +63,31 @@
     font-size: 3rem;
     text-align: center;
   }
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .card {
-    max-width: 400px;
+    width: 90%;
+    min-width: 300px;
+    min-height: 200px;
+    margin: 0 auto;
     border: 1px solid var(--faint-border);
     border-radius: 8px;
-    padding: 1em;
+    padding: 1em 0;
     background: #222;
+
+    h3,
+    p,
+    .tech-stack {
+      margin-left: 1em;
+    }
+  }
+  .card header {
+    h3 {
+      text-align: center;
+    }
+    border-bottom: 1px solid rgb(107, 106, 106);
   }
   .tech-stack {
     display: flex;
@@ -46,6 +95,7 @@
     justify-content: start;
     gap: 5px;
     margin-top: 6px;
+    flex-wrap: wrap;
 
     li {
       border: 2px solid var(--faint-border);
@@ -54,6 +104,17 @@
       background: var(--glass-bg-secondary);
       color: black;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .tech-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    svg {
+      color: currentColor;
     }
   }
   .card footer {
