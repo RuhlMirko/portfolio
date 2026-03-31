@@ -1,10 +1,10 @@
 {
     "projects": [
         {
-            "title": "Project Title",
+            "title": "Comando 99",
             "thumbnail": "path/to/thumbnail.jpg",
-            "description": "Project description",
-            "tech":["react","javascript","node.js"]
+            "description": "A bold, edgy landing page for an arma 3 community made to practice modern design principles. Features an army-inspired aesthetic with sharp typography and aggressive visual elements.",
+            "tech":["astro","javascript","css"]
         },
         {
             "title": "Another Project",
