@@ -15,6 +15,7 @@ const iconMap: Record<string, any> = {
 
 <section id="projects">
   <h2>Projects</h2>
+  <hr />
   <div class="projects-container">
     {
       projects.projects.map((project) => (
@@ -73,10 +74,10 @@ const iconMap: Record<string, any> = {
     min-width: 300px;
     min-height: 200px;
     margin: 0 auto;
-    border: 1px solid var(--faint-border);
+    border: 2px solid var(--faint-border);
     border-radius: 8px;
     padding: 1em 0;
-    background: #222;
+    background: var(--glass-bg);
 
     h3,
     p,
@@ -99,7 +100,8 @@ const iconMap: Record<string, any> = {
     flex-wrap: wrap;
 
     li {
-      border: 2px solid var(--faint-border);
+      /* border: 2px solid var(--faint-border); */
+      border: 2px solid #dad9d9;
       padding: 0 8px;
       border-radius: 25px;
       background: var(--glass-bg-secondary);
