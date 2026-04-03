@@ -10,10 +10,19 @@
 
 <style>
   .nav-links {
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
     list-style-type: none;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-block: 1rem;
+    box-shadow: 2px 0px 2.5rem #202020b4;
+    background: #2e2e2e7a;
+    backdrop-filter: blur(25px);
   }
 
   .nav-links a {

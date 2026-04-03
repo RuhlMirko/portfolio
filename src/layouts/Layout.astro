@@ -104,10 +104,7 @@
   // ######### SMOOTH SCROLL ######### //
   import Lenis from "lenis";
   import "lenis/dist/lenis.css";
-  const lenis = new Lenis({
-    duration: 1.2, // Animation duration in seconds
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  });
+  const lenis = new Lenis();
   function raf(time: number) {
     lenis.raf(time);
     requestAnimationFrame(raf);

@@ -34,7 +34,19 @@
     text-shadow: 0 0 5px #105270;
   }
   section {
-    padding-top: 10vh;
+    padding-top: 15vh;
     text-align: center;
+    animation: load-up 700ms ease-out both;
+  }
+
+  @keyframes load-up {
+    0% {
+      opacity: 0;
+      transform: translateY(28px) scale(0.92);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 </style>
