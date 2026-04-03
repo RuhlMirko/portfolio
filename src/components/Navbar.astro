@@ -21,8 +21,9 @@
     transform: translateX(-50%);
     padding-block: 1rem;
     box-shadow: 2px 0px 2.5rem #202020b4;
-    background: #2e2e2e7a;
+    background: #2e2e2e62;
     backdrop-filter: blur(25px);
+    animation: reveal-nav 1.2s ease-out forwards;
   }
 
   .nav-links a {
@@ -33,15 +34,12 @@
     font-size: 1rem;
     font-weight: 800;
     text-transform: uppercase;
-    /* background: #222; */
     background: var(--glass-bg);
     padding: 0.5em 1.5em;
     border: 1px solid var(--faint-border);
     box-shadow: 2px 2px 5px #111;
-    /* letter-spacing: 2px; */
     text-shadow: 0px 0px 5px rgba(59, 59, 59, 0.541);
     transition: 0.2s;
-    animation: reveal-nav 0.45s ease-out forwards;
   }
 
   .nav-links a:hover {
@@ -57,11 +55,9 @@
   @keyframes reveal-nav {
     from {
       opacity: 0;
-      transform: translateY(-14px);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 </style>

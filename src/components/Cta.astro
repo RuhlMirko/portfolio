@@ -1,9 +1,24 @@
 <section class="cta">
   <div class="cta-info">
-    <h2>Let's work together</h2>
-    <p>
-      Have a project in mind? I'm available for freelance work and
-      collaborations.
+    <h2 class="reveal-text" aria-label="Let's work together">
+      Let's work together
+    </h2>
+    <p
+      class="reveal-text reveal-paragraph"
+      aria-label="Have a project in mind? I'm available for freelance work and collaborations."
+    >
+      <span class="reveal-word" style="--word-index: 3">Have</span>
+      <span class="reveal-word" style="--word-index: 4">a</span>
+      <span class="reveal-word" style="--word-index: 5">project</span>
+      <span class="reveal-word" style="--word-index: 6">in</span>
+      <span class="reveal-word" style="--word-index: 7">mind?</span>
+      <span class="reveal-word" style="--word-index: 8">I'm</span>
+      <span class="reveal-word" style="--word-index: 9">available</span>
+      <span class="reveal-word" style="--word-index: 10">for</span>
+      <span class="reveal-word" style="--word-index: 11">freelance</span>
+      <span class="reveal-word" style="--word-index: 12">work</span>
+      <span class="reveal-word" style="--word-index: 13">and</span>
+      <span class="reveal-word" style="--word-index: 14">collaborations.</span>
     </p>
   </div>
 
@@ -52,10 +67,19 @@
   .cta {
     margin-top: 8vh;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     gap: 5vw;
     align-items: center;
+    animation: load-in 1200ms ease-in;
+  }
+
+  @keyframes load-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   h2 {
@@ -67,6 +91,27 @@
   p {
     font-size: 1.4rem;
     max-width: 40ch;
+
+    span {
+      margin-right: 0;
+    }
+  }
+
+  .reveal-text {
+    overflow: hidden;
+  }
+
+  .reveal-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.9em);
+    animation: word-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--word-index) * 35ms);
+    will-change: transform, opacity;
+  }
+
+  .reveal-paragraph {
+    line-height: 1.5;
   }
 
   .social-links {
@@ -132,6 +177,17 @@
     }
   }
 
+  @keyframes word-up {
+    from {
+      opacity: 0;
+      transform: translateY(0.9em);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .social-link {
     opacity: 0;
     transform: translateY(14px);
@@ -143,6 +199,12 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .reveal-word {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
     .social-link {
       opacity: 1;
       transform: none;
