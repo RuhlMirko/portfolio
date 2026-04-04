@@ -30,7 +30,7 @@
     border-bottom: 1px solid black;
     border-top: 2px solid rgb(92, 91, 91);
     backdrop-filter: blur(5px);
-    animation: reveal-nav 1.2s ease-out forwards;
+    animation: reveal-nav 0.5s ease-out forwards;
     z-index: 20;
     padding-block: 6px;
   }
@@ -65,10 +65,10 @@
 
   @keyframes reveal-nav {
     from {
-      opacity: 0;
+      transform: translate(-50%, -40px);
     }
     to {
-      opacity: 1;
+      transform: translate(-50%, 0);
     }
   }
 </style>
