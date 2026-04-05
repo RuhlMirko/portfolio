@@ -73,9 +73,30 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
             {project.demo && (
               <a href={project.demo} target="_blank">
                 Live demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14 21 3" />
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                </svg>
               </a>
             )}
-            <a href="">View code</a>
+            <a href="">
+              View code
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d={Icons.siDiscord.path} fill="currentColor" />
+              </svg>
+            </a>
           </footer>
         </div>
       ))
@@ -104,7 +125,7 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     min-width: 300px;
     min-height: 200px;
     margin: 0 auto;
-    border: 2px solid var(--faint-border);
+    border: 1px solid var(--faint-border);
     border-radius: 8px;
     overflow: hidden;
     padding: 0;
@@ -186,7 +207,10 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
       color: white;
       background: var(--aero-black);
       width: 100%;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
       border: 1px solid black;
       padding-block: 6px;
       border-radius: 0 0 5px 5px;
@@ -194,6 +218,12 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
       &:hover {
         background: var(--aero-blue);
       }
+    }
+
+    svg {
+      height: 16px;
+      aspect-ratio: 1;
+      margin-left: 0;
     }
   }
 </style>
