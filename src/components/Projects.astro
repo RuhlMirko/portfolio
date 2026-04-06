@@ -110,13 +110,14 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
   h2 {
     font-size: 3rem;
     text-align: center;
+    padding-bottom: 0.5rem;
   }
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   p {
-    text-wrap: stable;
+    text-wrap: pretty;
     max-width: 45ch;
     margin: 0.5rem auto 1rem;
   }
@@ -130,7 +131,8 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     min-width: 300px;
     min-height: 200px;
     margin: 0 auto;
-    border: 1px solid var(--faint-border);
+    /* border: 1px solid var(--faint-border); */
+    border: 1px solid rgb(71, 71, 71);
     border-radius: 8px;
     overflow: hidden;
     padding: 0;
@@ -171,16 +173,24 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     transition: transform 0.3s ease-out;
   }
   .card:hover {
-    transform: translateY(-4px);
+    border: 1px solid var(--faint-border);
   }
   .card:hover .card-media img,
   .card:hover .card-media .thumbnail-fallback {
     transform: scale(1.05);
   }
   .card:hover header h3 {
-    color: rgb(0, 217, 255);
+    background: linear-gradient(
+      to bottom,
+      #4fa0f7 0%,
+      #4893f5 40%,
+      #8fd3ff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     padding-left: 1.5rem;
-    text-shadow: 0 2px 5px rgba(0, 195, 255, 0.479);
+    text-shadow: none;
   }
   .card:hover .tech-stack li {
     background: var(--aero-blue);
@@ -217,7 +227,7 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     }
   }
   .card footer {
-    margin-top: 12px;
+    margin-top: 16px;
     display: flex;
     justify-content: space-around;
     align-items: center;
