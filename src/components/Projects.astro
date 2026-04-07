@@ -233,8 +233,8 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     align-items: center;
 
     a {
+      position: relative;
       color: white;
-      background: var(--aero-black);
       width: 100%;
       display: flex;
       align-items: center;
@@ -244,8 +244,27 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
       padding-block: 6px;
       border-radius: 0 0 5px 5px;
 
-      &:hover {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 0 0 5px 5px;
+        z-index: -1;
+      }
+
+      &::before {
+        background: var(--aero-black);
+      }
+
+      &::after {
         background: var(--aero-blue);
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
     }
 
