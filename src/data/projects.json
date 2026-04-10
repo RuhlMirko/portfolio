@@ -3,15 +3,15 @@
         {
             "title": "Comando 99",
             "thumbnail": "comando99",
-            "description": "A bold, edgy landing page for an arma 3 community made to practice modern design principles. Features an army-inspired aesthetic with sharp typography and aggressive visual elements.",
+            "description": "A bold, edgy landing page for an arma 3 community made to practice modern design principles.\nFeatures an army-inspired aesthetic with sharp typography and aggressive visual elements.",
             "tech":["astro","javascript","css"],
             "demo":"https://comando99.netlify.app/"
         },
         {
             "title": "Tenzies",
             "thumbnail": "tenzies",
-            "description": "An interactive dice game built with React where players roll until all dice show the same number. Implements real-time timer functionality and persistent high score tracking using localStorage and React hooks.",
-            "tech":["astro","typescript"]            
+            "description": "An interactive dice game built with React where players roll until all dice show the same number.\nImplements real-time timer functionality and persistent high score tracking using localStorage and React hooks.",
+            "tech":["react","typescript","css"]            
         }
     ]
 }

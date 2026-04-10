@@ -46,7 +46,11 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
             <h3>{project.title}</h3>
           </header>
           <main>
-            <p>{project.description}</p>
+            <p class="project-description">
+              {project.description.split("\n").map((line) => (
+                <span class="desc-line">{line}</span>
+              ))}
+            </p>
             <ul class="tech-stack">
               {project.tech.map((tech) => {
                 const icon = iconMap[tech];
@@ -116,10 +120,17 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  p {
+  .project-description {
     text-wrap: pretty;
     max-width: 45ch;
     margin: 0.5rem auto 1rem;
+    line-height: 1.1;
+  }
+  .desc-line {
+    display: block;
+  }
+  .desc-line + .desc-line {
+    margin-top: 0.35rem;
   }
 
   h3 {
@@ -136,12 +147,15 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     border-radius: 8px;
     overflow: hidden;
     padding: 0;
-    background: var(--glass-bg);
+    background: #1212125a;
     text-shadow: 0 0 5px black;
     transition: 0.2s;
     p,
     .tech-stack {
       margin-left: 1em;
+    }
+    &:hover {
+      background: #142d4e;
     }
   }
   .card header {
