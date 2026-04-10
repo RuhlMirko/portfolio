@@ -243,21 +243,15 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
       border: 1px solid black;
       padding-block: 6px;
       border-radius: 0 0 5px 5px;
+      background: var(--aero-black);
+      z-index: 1;
 
-      &::before,
       &::after {
         content: "";
         position: absolute;
         inset: 0;
         border-radius: 0 0 5px 5px;
         z-index: -1;
-      }
-
-      &::before {
-        background: var(--aero-black);
-      }
-
-      &::after {
         background: var(--aero-blue);
         opacity: 0;
         transition: opacity 0.2s ease-out;
