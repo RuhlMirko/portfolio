@@ -119,6 +119,7 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
   .project-description {
     text-wrap: pretty;
@@ -138,11 +139,10 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     transition: color 0.2s;
   }
   .card {
-    width: 90%;
+    width: 100%;
     min-width: 300px;
     min-height: 200px;
     margin: 0 auto;
-    /* border: 1px solid var(--faint-border); */
     border: 1px solid rgb(71, 71, 71);
     border-radius: 8px;
     overflow: hidden;
