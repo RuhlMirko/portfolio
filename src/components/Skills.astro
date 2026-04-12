@@ -1,0 +1,73 @@
+---
+const skills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Astro",
+  "Vue",
+  "Tailwind CSS",
+  "Node.js",
+  "Python",
+  "Git",
+  "SQL",
+];
+---
+
+<section class="skills-section">
+  <h2>Skills</h2>
+  <div class="marquee-container">
+    <div class="marquee">
+      {skills.map((skill) => <div class="skill-item">{skill}</div>)}
+      {skills.map((skill) => <div class="skill-item">{skill}</div>)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .marquee-container {
+    overflow: hidden;
+    background: linear-gradient(90deg, #313131, #202020, #313131);
+    padding: 1rem 0;
+  }
+
+  .marquee {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    gap: 1rem;
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .skill-item {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--aero-black);
+    border-radius: 15px;
+    color: white;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid var(--faint-border);
+    box-shadow: 0 5px 5px rgb(24, 24, 24);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
