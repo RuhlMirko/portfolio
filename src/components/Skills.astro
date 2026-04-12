@@ -1,15 +1,17 @@
 ---
+import * as Icons from "simple-icons";
+
 const skills = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Astro",
-  "Vue",
-  "Tailwind CSS",
-  "Node.js",
-  "Python",
-  "Git",
-  "SQL",
+  { label: "JavaScript", icon: Icons.siJavascript },
+  { label: "TypeScript", icon: Icons.siTypescript },
+  { label: "React", icon: Icons.siReact },
+  { label: "Astro", icon: Icons.siAstro },
+  { label: "Vue", icon: Icons.siVuedotjs },
+  { label: "Tailwind CSS", icon: Icons.siTailwindcss },
+  { label: "Node.js", icon: Icons.siNodedotjs },
+  { label: "Python", icon: Icons.siPython },
+  { label: "Git", icon: Icons.siGit },
+  { label: "SQL", icon: Icons.siSqlite },
 ];
 ---
 
@@ -17,8 +19,38 @@ const skills = [
   <h2>Skills</h2>
   <div class="marquee-container">
     <div class="marquee">
-      {skills.map((skill) => <div class="skill-item">{skill}</div>)}
-      {skills.map((skill) => <div class="skill-item">{skill}</div>)}
+      {
+        skills.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
+      {
+        skills.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
@@ -51,6 +83,9 @@ const skills = [
   }
 
   .skill-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
     flex-shrink: 0;
     padding: 0.75rem 1.5rem;
     background: var(--aero-black);
@@ -60,6 +95,17 @@ const skills = [
     white-space: nowrap;
     border: 1px solid var(--faint-border);
     box-shadow: 0 5px 5px rgb(24, 24, 24);
+  }
+
+  .skill-item span {
+    color: white;
+  }
+
+  .skill-icon {
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
   }
 
   @keyframes scroll {
