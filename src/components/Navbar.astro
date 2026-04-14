@@ -9,44 +9,65 @@
 </nav>
 
 <style>
-  .nav-links {
+  nav {
     position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    list-style-type: none;
-    width: 100%;
+    top: 0.9rem;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 2px 0px 2.5rem #202020b4;
-    background: linear-gradient(
-      to bottom,
-      rgba(168, 167, 167, 0.25) 0,
-      rgba(117, 117, 117, 0.15) 20%,
-      rgba(46, 46, 46, 0.3) 90%
-    );
-    border-bottom: 1px solid black;
-    border-top: 2px solid rgb(92, 91, 91);
-    backdrop-filter: blur(3px);
+    width: min(960px, calc(100% - 1rem));
+    z-index: 30;
     animation: reveal-nav 0.5s ease-out forwards;
-    z-index: 20;
-    padding-block: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.45rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(189, 189, 189, 0.25) 0%,
+        rgba(70, 70, 70, 0.28) 100%
+      ),
+      rgba(9, 9, 9, 0.48);
+    box-shadow:
+      0 12px 32px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px) saturate(130%);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-links a {
     position: relative;
-    display: inline-block;
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: #f5f8ff;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    padding: 0.5em 1.5em;
-    border-radius: 15px;
-    text-shadow: 0px 0px 5px rgba(59, 59, 59, 0.541);
-    padding-block: 1rem;
-    border: 1px solid #111;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.72rem 1.1rem;
+    border-radius: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    text-shadow: 0 0 8px rgba(29, 29, 29, 0.6);
+    transition:
+      transform 180ms ease,
+      color 180ms ease,
+      border-color 220ms ease,
+      box-shadow 220ms ease;
   }
 
   .nav-links a::before,
@@ -54,27 +75,60 @@
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 15px;
+    border-radius: inherit;
     z-index: -1;
   }
 
   .nav-links a::before {
-    background: var(--aero-black);
+    background: linear-gradient(
+      150deg,
+      rgba(17, 17, 17, 0.78),
+      rgba(34, 34, 34, 0.68)
+    );
   }
 
   .nav-links a::after {
-    background: var(--aero-blue);
+    background: linear-gradient(
+      140deg,
+      rgba(112, 191, 255, 0.2),
+      rgba(86, 149, 255, 0.48)
+    );
     opacity: 0;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 180ms ease-out;
   }
 
-  .nav-links a:hover::after {
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    transform: translateY(-1px);
+    color: #ffffff;
+    border-color: rgba(160, 218, 255, 0.7);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+    outline: none;
+  }
+
+  .nav-links a:hover::after,
+  .nav-links a:focus-visible::after {
     opacity: 1;
   }
-  nav {
-    /* margin-block: 1rem 2rem; */
-    width: 70%;
-    margin: 1.3rem auto 2rem;
+
+  @media (max-width: 780px) {
+    nav {
+      top: 0.6rem;
+      width: calc(100% - 0.5rem);
+    }
+
+    .nav-links {
+      justify-content: flex-start;
+      gap: 0.35rem;
+      padding: 0.35rem;
+      border-radius: 16px;
+    }
+
+    .nav-links a {
+      font-size: 0.84rem;
+      padding: 0.62rem 0.9rem;
+      border-radius: 11px;
+    }
   }
 
   @keyframes reveal-nav {

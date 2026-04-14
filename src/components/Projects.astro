@@ -29,8 +29,7 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
 ---
 
 <section id="projects">
-  <h2>Projects</h2>
-  <hr />
+  <h2 class="section-title">Projects</h2>
   <div class="projects-container">
     {
       projects.projects.map((project) => (
@@ -119,9 +118,10 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
   }
   .project-description {
     text-wrap: pretty;
-    max-width: 45ch;
+    max-width: 25vw;
     margin: 0.5rem auto 1rem;
     line-height: 1.1;
+    font-size: 1.2rem;
   }
   .desc-line {
     display: block;
@@ -211,7 +211,7 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
     list-style-type: none;
     justify-content: start;
     gap: 5px;
-    margin-top: 6px;
+    margin-block: 24px;
     flex-wrap: wrap;
 
     li {
@@ -251,7 +251,7 @@ const imageMap: Record<string, ImageMetadata> = Object.fromEntries(
       justify-content: center;
       gap: 6px;
       border: 1px solid black;
-      padding-block: 6px;
+      padding-block: 12px;
       border-radius: 0 0 5px 5px;
       background: var(--aero-black);
       z-index: 1;
