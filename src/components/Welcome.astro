@@ -37,11 +37,18 @@
     text-shadow: 0 0 5px #105270;
   }
   section {
-    padding-top: 15vh;
+    padding-block: 6vh;
     text-align: center;
     animation: load-up 700ms ease-out both;
+    margin-bottom: 0;
+    background: var(--aero-black);
+    border-radius: 25px;
   }
-
+  #hero {
+    border: 2px solid rgb(94, 94, 94);
+    max-width: 800px;
+    margin: 30vh auto 12vh;
+  }
   @keyframes load-up {
     0% {
       opacity: 0;
