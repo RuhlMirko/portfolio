@@ -15,7 +15,7 @@ const skills = [
 ];
 ---
 
-<section class="skills-section">
+<section id="skills" class="skills-section" data-reveal>
   <h2 class="section-title">Skills</h2>
   <div class="marquee-container">
     <div class="marquee">
@@ -110,6 +110,7 @@ const skills = [
   .skill-item {
     position: relative;
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.65rem;
     flex-shrink: 0;
@@ -119,10 +120,11 @@ const skills = [
     color: white;
     font-weight: 500;
     white-space: nowrap;
-    border: 2px solid var(--faint-border);
+    border: 1px solid var(--faint-border);
     box-shadow: 0 5px 5px rgb(24, 24, 24);
     transition: 0.2s;
     font-size: 1.2rem;
+    min-width: 120px;
   }
 
   .skill-item::after {
@@ -146,7 +148,7 @@ const skills = [
 
   .skill-icon {
     color: white;
-    height: 1.3rem;
+    height: 2.3rem;
     aspect-ratio: 1;
     flex-shrink: 0;
   }

@@ -70,7 +70,7 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 40px;
+    scroll-padding-top: 80px;
   }
   section {
     margin-block: 8rem;
@@ -87,6 +87,7 @@
     margin: 0 auto;
   }
   body {
+    overflow-x: hidden;
     color: white;
     background:
       linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -133,6 +134,18 @@
     margin-bottom: 12px;
     border-radius: 25px;
   }
+
+  [data-reveal] {
+    opacity: 0;
+    transform: translateX(150px);
+    transition:
+      opacity 0.5s ease-out,
+      transform 1s ease-out;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 </style>
 
 <script>
@@ -146,4 +159,21 @@
   }
 
   requestAnimationFrame(raf);
+
+  // ######### REVEAL UP ANIMATION ######### //
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  document.querySelectorAll("[data-reveal]").forEach((el) => {
+    revealObserver.observe(el);
+  });
 </script>
