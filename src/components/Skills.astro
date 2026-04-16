@@ -1,26 +1,43 @@
 ---
 import * as Icons from "simple-icons";
 
-const skills = [
+const frontend = [
   { label: "JavaScript", icon: Icons.siJavascript },
   { label: "TypeScript", icon: Icons.siTypescript },
+  { label: "Html5", icon: Icons.siHtml5 },
+  { label: "CSS", icon: Icons.siCss },
+  { label: "Tailwind", icon: Icons.siTailwindcss },
+  { label: "bootstrap", icon: Icons.siBootstrap },
   { label: "React", icon: Icons.siReact },
-  { label: "Astro", icon: Icons.siAstro },
   { label: "Vue", icon: Icons.siVuedotjs },
-  { label: "Tailwind CSS", icon: Icons.siTailwindcss },
+  { label: "Astro", icon: Icons.siAstro },
+  { label: "Vite", icon: Icons.siVite },
+];
+
+const backend = [
   { label: "Node.js", icon: Icons.siNodedotjs },
+  { label: "Express.js", icon: Icons.siExpress },
+  { label: "Firebase", icon: Icons.siFirebase },
+  { label: "JSON", icon: Icons.siJson },
+  { label: "Next.js", icon: Icons.siNextdotjs },
+];
+
+const others = [
+  { label: "Kotlin", icon: Icons.siKotlin },
   { label: "Python", icon: Icons.siPython },
-  { label: "Git", icon: Icons.siGit },
-  { label: "SQL", icon: Icons.siSqlite },
+  { label: "Streamlit", icon: Icons.siStreamlit },
+  { label: "GDScript", icon: Icons.siGodotengine },
+  { label: "Lua", icon: Icons.siLua },
 ];
 ---
 
 <section id="skills" class="skills-section" data-reveal>
   <h2 class="section-title">Skills</h2>
   <div class="marquee-container">
+    <h3>Frontend</h3>
     <div class="marquee">
       {
-        skills.map((skill) => (
+        frontend.map((skill) => (
           <div class="skill-item">
             <svg
               class="skill-icon"
@@ -36,7 +53,97 @@ const skills = [
         ))
       }
       {
-        skills.map((skill) => (
+        frontend.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="marquee-container backend">
+    <h3>Backend</h3>
+    <div class="marquee">
+      {
+        backend.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
+      {
+        backend.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
+      {
+        backend.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="marquee-container others">
+    <h3>Others</h3>
+    <div class="marquee">
+      {
+        others.map((skill) => (
+          <div class="skill-item">
+            <svg
+              class="skill-icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d={skill.icon.path} fill="currentColor" />
+            </svg>
+            <span>{skill.label}</span>
+          </div>
+        ))
+      }
+      {
+        others.map((skill) => (
           <div class="skill-item">
             <svg
               class="skill-icon"
@@ -84,6 +191,12 @@ const skills = [
       black 90%,
       transparent
     );
+    margin-bottom: 1rem;
+    h3 {
+      padding: 0 0 1em;
+      width: 100%;
+      letter-spacing: 2px;
+    }
   }
 
   .marquee {
@@ -101,6 +214,10 @@ const skills = [
     &:hover > .skill-item:not(:hover) {
       opacity: 0.4;
     }
+  }
+
+  .backend .marquee {
+    animation: scroll-secondary 20s linear infinite;
   }
 
   .marquee:hover {
@@ -159,6 +276,14 @@ const skills = [
     }
     100% {
       transform: translateX(-50%);
+    }
+  }
+  @keyframes scroll-secondary {
+    0% {
+      transform: translateX(-30%);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
 </style>
