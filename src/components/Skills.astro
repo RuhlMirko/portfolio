@@ -14,6 +14,8 @@ const frontend = [
   { label: "Vite", icon: Icons.siVite },
 ];
 
+const frontendLoop = [...frontend, ...frontend];
+
 const backend = [
   { label: "Node.js", icon: Icons.siNodedotjs },
   { label: "Express.js", icon: Icons.siExpress },
@@ -22,6 +24,8 @@ const backend = [
   { label: "Next.js", icon: Icons.siNextdotjs },
 ];
 
+const backendLoop = [...backend, ...backend, ...backend, ...backend];
+
 const others = [
   { label: "Kotlin", icon: Icons.siKotlin },
   { label: "Python", icon: Icons.siPython },
@@ -29,6 +33,8 @@ const others = [
   { label: "GDScript", icon: Icons.siGodotengine },
   { label: "Lua", icon: Icons.siLua },
 ];
+
+const othersLoop = [...others, ...others, ...others, ...others];
 ---
 
 <section id="skills" class="skills-section" data-reveal>
@@ -37,23 +43,7 @@ const others = [
     <h3>Frontend</h3>
     <div class="marquee">
       {
-        frontend.map((skill) => (
-          <div class="skill-item">
-            <svg
-              class="skill-icon"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path d={skill.icon.path} fill="currentColor" />
-            </svg>
-            <span>{skill.label}</span>
-          </div>
-        ))
-      }
-      {
-        frontend.map((skill) => (
+        frontendLoop.map((skill) => (
           <div class="skill-item">
             <svg
               class="skill-icon"
@@ -74,39 +64,7 @@ const others = [
     <h3>Backend</h3>
     <div class="marquee">
       {
-        backend.map((skill) => (
-          <div class="skill-item">
-            <svg
-              class="skill-icon"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path d={skill.icon.path} fill="currentColor" />
-            </svg>
-            <span>{skill.label}</span>
-          </div>
-        ))
-      }
-      {
-        backend.map((skill) => (
-          <div class="skill-item">
-            <svg
-              class="skill-icon"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path d={skill.icon.path} fill="currentColor" />
-            </svg>
-            <span>{skill.label}</span>
-          </div>
-        ))
-      }
-      {
-        backend.map((skill) => (
+        backendLoop.map((skill) => (
           <div class="skill-item">
             <svg
               class="skill-icon"
@@ -127,23 +85,7 @@ const others = [
     <h3>Others</h3>
     <div class="marquee">
       {
-        others.map((skill) => (
-          <div class="skill-item">
-            <svg
-              class="skill-icon"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path d={skill.icon.path} fill="currentColor" />
-            </svg>
-            <span>{skill.label}</span>
-          </div>
-        ))
-      }
-      {
-        others.map((skill) => (
+        othersLoop.map((skill) => (
           <div class="skill-item">
             <svg
               class="skill-icon"
@@ -202,8 +144,8 @@ const others = [
   .marquee {
     display: flex;
     width: max-content;
-    animation: scroll 20s linear infinite;
-    gap: 1rem;
+    animation: scroll 25s linear infinite;
+    will-change: transform;
 
     & > .skill-item {
       transition: 0.2s ease-out;
@@ -217,7 +159,8 @@ const others = [
   }
 
   .backend .marquee {
-    animation: scroll-secondary 20s linear infinite;
+    animation-duration: 25s;
+    animation-direction: reverse;
   }
 
   .marquee:hover {
@@ -242,6 +185,7 @@ const others = [
     transition: 0.2s;
     font-size: 1.2rem;
     min-width: 120px;
+    margin-right: 1rem;
   }
 
   .skill-item::after {
@@ -276,14 +220,6 @@ const others = [
     }
     100% {
       transform: translateX(-50%);
-    }
-  }
-  @keyframes scroll-secondary {
-    0% {
-      transform: translateX(-30%);
-    }
-    100% {
-      transform: translateX(0);
     }
   }
 </style>
