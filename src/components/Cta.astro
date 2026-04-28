@@ -23,7 +23,7 @@
   </div>
 
   <div class="social-links" aria-label="Social links">
-    <div class="social-link aero-black">
+    <div class="social-link">
       <a
         href="https://www.linkedin.com"
         target="_blank"
@@ -38,7 +38,7 @@
         <span class="tooltip">LinkedIn</span>
       </a>
     </div>
-    <div class="social-link aero-black">
+    <div class="social-link">
       <a
         href="https://github.com"
         target="_blank"
@@ -68,12 +68,23 @@
 
 <style>
   .cta {
-    margin-top: 8vh;
+    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 5vw;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
     animation: load-in 1200ms ease-in;
+    border: 1px solid var(--faint-border);
+    padding: 2rem 3rem 3rem;
+    border-radius: 5px;
+    background: var(--aero-black);
+    width: 50%;
+    box-shadow: 0 8px 1rem rgba(0, 0, 0, 0.623);
+
+    h3 {
+      white-space: nowrap;
+    }
   }
 
   @keyframes load-in {
@@ -120,9 +131,7 @@
 
   .social-links {
     display: flex;
-    justify-content: center;
     gap: 0.8rem;
-    /* align-self: start; */
   }
 
   .social-link {
@@ -133,8 +142,7 @@
 
   .social-links a {
     position: relative;
-    width: 3.7rem;
-    height: 3.2rem;
+    padding: 0.5rem 1rem;
     display: grid;
     place-items: center;
     color: white;

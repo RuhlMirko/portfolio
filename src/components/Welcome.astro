@@ -1,10 +1,14 @@
 ---
-
+import Cta from "../components/Cta.astro";
 ---
 
 <section id="hero">
-  <h1>Mirko Joel Ruhl</h1>
-  <h2>Full Stack Developer</h2>
+  <div class="hero-info">
+    <h1>Mirko Joel Ruhl</h1>
+    <h2>Full Stack Developer</h2>
+    <p>Frontend ◦ Backend ◦ Designer. <br />Building friendly UX</p>
+  </div>
+  <Cta />
 </section>
 
 <style>
@@ -23,31 +27,40 @@
       sans-serif;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 3vw;
     transition: 0.3s;
     width: fit-content;
-    margin: 0 auto;
+    white-space: nowrap;
+    /* text-shadow: -5px 3px 0 rgba(0, 65, 126, 0.486); */
+    text-shadow: 0 0 5px #105270;
+    margin-bottom: 5px;
   }
+
   h2 {
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.5vw;
     width: fit-content;
-    margin: 0 auto;
     text-shadow: 0 0 5px #105270;
+    background: #121212;
+    padding: 0.2rem 1rem;
+    margin: 0 auto 1rem;
+    border: 1px solid var(--faint-border);
+    box-shadow: 0 8px 1rem rgba(0, 0, 0, 0.623);
+  }
+  .hero-info {
+    margin-right: 3rem;
   }
   section {
     padding-block: 6vh;
-    text-align: center;
     animation: load-up 700ms ease-out both;
     margin-bottom: 0;
-    background: var(--aero-black);
-    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
   }
   #hero {
-    border: 2px solid rgb(94, 94, 94);
-    max-width: 800px;
-    margin: 30vh auto 12vh;
+    margin: 20vh auto 10vh;
   }
   @keyframes load-up {
     0% {
