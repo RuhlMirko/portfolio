@@ -7,7 +7,7 @@ import Cta from "../components/Cta.astro";
     <h1>Mirko Joel Ruhl</h1>
     <h2>Full Stack Developer</h2>
   </header>
-  <main>
+  <main data-reveal>
     <div class="hero-info">
       <div class="achievements">
         <p><span>4+</span><br />Years experience</p>
@@ -54,14 +54,18 @@ import Cta from "../components/Cta.astro";
   h2 {
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 1.5vw;
+    font-size: 1.8rem;
     width: fit-content;
     /* text-shadow: 0 0 5px #105270; */
     background: #121212;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 2rem;
     margin: 0 auto 1rem;
     border: 1px solid var(--faint-border);
     box-shadow: 0 8px 1rem rgba(0, 0, 0, 0.623);
+  }
+
+  #hero header {
+    animation: load-up 700ms ease-out both;
   }
 
   .hero-info {
@@ -117,7 +121,7 @@ import Cta from "../components/Cta.astro";
 
   section {
     padding-block: 6vh;
-    animation: load-up 700ms ease-out both;
+
     margin-bottom: 0;
   }
 
