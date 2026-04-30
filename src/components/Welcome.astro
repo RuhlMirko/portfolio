@@ -69,8 +69,6 @@ import Cta from "../components/Cta.astro";
   }
 
   .hero-info {
-    margin-right: 3rem;
-
     a {
       border: 1px solid rgb(133, 133, 133);
       color: white;
@@ -108,9 +106,9 @@ import Cta from "../components/Cta.astro";
 
     p {
       border: 1px solid rgb(80, 80, 80);
-      height: 100px;
+      height: 120px;
       background: #202020;
-      padding: 1rem;
+      padding: 1.7rem 1rem 0;
       box-shadow: 0 5px 10px black;
       span {
         font-size: 2rem;
@@ -126,10 +124,27 @@ import Cta from "../components/Cta.astro";
   }
 
   main {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5rem;
+    align-items: stretch;
     margin-top: 7rem;
+  }
+
+  @media (max-width: 980px) {
+    main {
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+    .hero-info {
+      margin: 0;
+    }
+    .achievements {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      width: 100%;
+    }
   }
 
   #hero {
