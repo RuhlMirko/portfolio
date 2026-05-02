@@ -1,0 +1,227 @@
+---
+const highlights = [
+  {
+    value: "4+",
+    label: "Years building on the web",
+  },
+  {
+    value: "UX",
+    label: "Clear interfaces over noisy features",
+  },
+  {
+    value: "FS",
+    label: "Frontend and backend delivery",
+  },
+];
+---
+
+<section id="about" class="about" data-reveal>
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-shell">
+    <div class="about-copy">
+      <p class="eyebrow">Full stack developer with a product mindset</p>
+      <p class="lead">
+        I build web experiences that feel polished on the surface and stay
+        dependable underneath. My focus is turning ideas into usable products
+        with clean interfaces, solid structure, and room to grow.
+      </p>
+      <p>
+        I enjoy working across the stack, from crafting responsive frontend
+        details to shaping backend logic that keeps things fast and
+        maintainable. The goal is usually the same: reduce friction, make the
+        experience feel natural, and ship something worth using.
+      </p>
+      <p>
+        Lately I have been working with modern JavaScript tooling,
+        component-driven UI, and lightweight systems that balance speed,
+        readability, and scalability.
+      </p>
+    </div>
+
+    <aside class="about-panel" aria-label="About highlights">
+      <div class="highlight-grid">
+        {
+          highlights.map((highlight) => (
+            <article class="highlight-card">
+              <span class="highlight-value">{highlight.value}</span>
+              <p>{highlight.label}</p>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="focus-card">
+        <p class="focus-label">What I care about</p>
+        <ul>
+          <li>Readable code that stays easy to extend</li>
+          <li>Interfaces that guide users without extra explanation</li>
+          <li>Shipping practical solutions instead of decorative complexity</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding-inline: clamp(0.75rem, 2vw, 1.25rem);
+  }
+
+  .about-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.95fr);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .about-copy,
+  .about-panel {
+    border: 1px solid rgba(163, 163, 163, 0.28);
+    border-radius: 20px;
+    background: rgba(18, 18, 18, 0.92);
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+  }
+
+  .about-copy {
+    padding: clamp(1.5rem, 3vw, 2.4rem);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(190, 202, 217, 0.3);
+    border-radius: 999px;
+    background: var(--aero-black);
+    color: #f3f7ff;
+    font-family: "Jost", "Segoe UI", sans-serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .lead {
+    font-size: clamp(1.2rem, 2vw, 1.45rem);
+    line-height: 1.55;
+    color: #f3f7ff;
+    max-width: 30ch;
+    margin-bottom: 1rem;
+  }
+
+  .about-copy p + p {
+    margin-top: 1rem;
+  }
+
+  .about-copy p:not(.eyebrow) {
+    line-height: 1.75;
+    font-size: 1.03rem;
+    max-width: 62ch;
+  }
+
+  .about-panel {
+    padding: 1rem;
+    background:
+      linear-gradient(180deg, rgba(20, 43, 74, 0.82), rgba(18, 18, 18, 0.96)),
+      var(--aero-black);
+  }
+
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlight-card,
+  .focus-card {
+    border: 1px solid rgba(205, 220, 241, 0.24);
+    border-radius: 16px;
+    background: rgba(9, 12, 17, 0.58);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+  }
+
+  .highlight-card {
+    padding: 1rem 0.85rem;
+    min-height: 142px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
+  }
+
+  .highlight-value {
+    font-family: "Jost", "Segoe UI", sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    letter-spacing: 0.08em;
+    color: white;
+  }
+
+  .highlight-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(236, 242, 250, 0.88);
+  }
+
+  .focus-card {
+    padding: 1.15rem;
+  }
+
+  .focus-label {
+    margin-bottom: 0.8rem;
+    color: white;
+    font-family: "Jost", "Segoe UI", sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .focus-card ul {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .focus-card li {
+    position: relative;
+    padding-left: 1rem;
+    line-height: 1.6;
+    color: rgba(236, 242, 250, 0.9);
+  }
+
+  .focus-card li::before {
+    content: "";
+    position: absolute;
+    top: 0.72rem;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #8fd3ff;
+    box-shadow: 0 0 10px rgba(143, 211, 255, 0.6);
+  }
+
+  @media (max-width: 980px) {
+    .about-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .lead,
+    .about-copy p:not(.eyebrow) {
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .highlight-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .highlight-card {
+      min-height: auto;
+    }
+  }
+</style>
