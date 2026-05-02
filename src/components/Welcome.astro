@@ -29,39 +29,34 @@ import Cta from "../components/Cta.astro";
 
 <style>
   body {
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
+    font-family: inherit;
   }
   h1 {
-    font-size: 4rem;
     transition: 0.3s;
     width: fit-content;
     white-space: nowrap;
     margin: 0 auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.12em;
   }
 
   h2 {
-    font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
     width: fit-content;
-    /* text-shadow: 0 0 5px #105270; */
-    background: #121212;
-    padding: 0.2rem 2rem;
-    margin: 0 auto 1rem;
-    border: 1px solid var(--faint-border);
-    box-shadow: 0 8px 1rem rgba(0, 0, 0, 0.623);
+    color: var(--text-primary);
+    /* background: linear-gradient(
+      180deg,
+      rgba(18, 18, 18, 0.92),
+      rgba(10, 16, 28, 0.96)
+    ); */
+    background: var(--aero-black);
+    padding: 0.45rem 1.5rem;
+    margin: 0 auto 1.25rem;
+    border: 1px solid rgba(187, 197, 210, 0.32);
+    border-radius: 999px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
   }
 
   #hero header {
@@ -94,14 +89,14 @@ import Cta from "../components/Cta.astro";
     display: flex;
     justify-content: start;
     gap: 8px;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
   }
 
   .achievements {
     display: flex;
     justify-content: space-between;
     gap: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     font-family: "Jost";
 
     p {
@@ -109,12 +104,20 @@ import Cta from "../components/Cta.astro";
       height: 120px;
       background: #202020;
       padding: 1.7rem 1rem 0;
-      box-shadow: 0 5px 10px black;
+      /* box-shadow: 0 5px 10px black; */
+      box-shadow: 0 12px 18px rgba(0, 0, 0, 0.55);
       span {
         font-size: 2rem;
         margin: 6px 0;
       }
     }
+  }
+
+  .hero-info > p {
+    max-width: 26ch;
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--text-primary);
   }
 
   section {
