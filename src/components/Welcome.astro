@@ -15,7 +15,11 @@ import Cta from "../components/Cta.astro";
         <p><span>Scalable</span><br />Projects</p>
       </div>
 
-      <p>Frontend ◦ Backend ◦ Designer. <br />Building friendly UX</p>
+      <p>
+        Frontend ◦ Backend ◦ Designer. <br />Building excellent UX with
+        JavaScript, TypeScript, Astro, React, Node.js, and a focus on clean,
+        scalable interfaces.
+      </p>
 
       <div class="hero-cta">
         <a class="cta" href="#projects">View Projects</a>
@@ -46,11 +50,6 @@ import Cta from "../components/Cta.astro";
     font-size: clamp(1.05rem, 1.8vw, 1.35rem);
     width: fit-content;
     color: var(--text-primary);
-    /* background: linear-gradient(
-      180deg,
-      rgba(18, 18, 18, 0.92),
-      rgba(10, 16, 28, 0.96)
-    ); */
     background: var(--aero-black);
     padding: 0.45rem 1.5rem;
     margin: 0 auto 1.25rem;
@@ -65,23 +64,53 @@ import Cta from "../components/Cta.astro";
 
   .hero-info {
     a {
+      position: relative;
+      z-index: 1;
       border: 1px solid rgb(133, 133, 133);
       color: white;
       padding: 1rem;
       text-decoration: none;
       border-radius: 15px;
-      background: var(--aero-black);
+      background: transparent;
       min-width: 120px;
       text-align: center;
+      transition: transform 0.2s ease-out;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.548);
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 15px;
+        z-index: -1;
+      }
+
+      &::before {
+        background: var(--aero-black);
+      }
+
+      &::after {
+        background: var(--aero-blue);
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+        filter: brightness(1.3);
+      }
 
       &:hover {
-        background: var(--aero-blue);
+        transform: translate(2px, 2px);
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
     }
 
     .cta {
-      background: radial-gradient(rgb(0, 112, 216), rgb(0, 39, 168));
-      /* background: var(--aero-blue); */
+      &::before {
+        background: radial-gradient(rgb(0, 112, 216), rgb(0, 39, 168));
+      }
     }
   }
 
@@ -114,7 +143,7 @@ import Cta from "../components/Cta.astro";
   }
 
   .hero-info > p {
-    max-width: 26ch;
+    max-width: 60ch;
     font-size: clamp(1.05rem, 1.5vw, 1.2rem);
     line-height: 1.7;
     color: var(--text-primary);
