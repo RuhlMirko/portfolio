@@ -130,14 +130,22 @@ import Cta from "../components/Cta.astro";
 
     p {
       border: 1px solid rgb(80, 80, 80);
-      height: 120px;
+      min-height: 120px;
       background: #202020;
-      padding: 1.7rem 1rem 0;
+      padding: 1rem 0.9rem;
       /* box-shadow: 0 5px 10px black; */
       box-shadow: 0 12px 18px rgba(0, 0, 0, 0.55);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.35rem;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
       span {
-        font-size: 2rem;
-        margin: 6px 0;
+        display: block;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1;
+        margin: 0;
       }
     }
   }
@@ -168,6 +176,13 @@ import Cta from "../components/Cta.astro";
       grid-template-columns: 1fr;
       gap: 0.9rem;
     }
+    h1 {
+      text-shadow: 0 12px 12px rgba(0, 0, 0, 0.479);
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+    }
     .hero-info {
       margin: 0;
     }
@@ -176,6 +191,21 @@ import Cta from "../components/Cta.astro";
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
       width: 100%;
+    }
+
+    .achievements p {
+      min-height: 132px;
+    }
+
+    .hero-cta a {
+      width: 100%;
+      padding-block: 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .achievements {
+      grid-template-columns: 1fr;
     }
   }
 
