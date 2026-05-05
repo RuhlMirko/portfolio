@@ -1,5 +1,28 @@
-<nav>
+<nav class="site-nav">
   <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About me</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button
+    class="hamburger-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    aria-label="Toggle navigation"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        d="M4 7h16M4 12h16M4 17h16"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"></path>
+    </svg>
+  </button>
+  <ul id="mobile-menu" class="hamburger" hidden>
     <li><a href="#hero">Home</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -44,11 +67,49 @@
     scrollbar-width: none;
   }
 
+  .hamburger {
+    display: none;
+    list-style: none;
+    margin: 0;
+  }
+
+  .hamburger-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3rem;
+    margin-left: auto;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: var(--aero-black);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition:
+      transform 180ms ease,
+      border-color 220ms ease;
+    color: #f5f8ff;
+  }
+
+  .hamburger-toggle svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+  }
+
+  .hamburger-toggle:hover,
+  .hamburger-toggle:focus-visible {
+    transform: translateY(-1px);
+    border-color: rgba(160, 218, 255, 0.7);
+    outline: none;
+  }
+
   .nav-links::-webkit-scrollbar {
     display: none;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .hamburger a {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -72,7 +133,9 @@
   }
 
   .nav-links a::before,
-  .nav-links a::after {
+  .nav-links a::after,
+  .hamburger a::before,
+  .hamburger a::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -80,18 +143,22 @@
     z-index: -1;
   }
 
-  .nav-links a::before {
+  .nav-links a::before,
+  .hamburger a::before {
     background: var(--aero-black);
   }
 
-  .nav-links a::after {
+  .nav-links a::after,
+  .hamburger a::after {
     background: var(--aero-blue);
     opacity: 0;
     transition: opacity 180ms ease-out;
   }
 
   .nav-links a:hover,
-  .nav-links a:focus-visible {
+  .nav-links a:focus-visible,
+  .hamburger a:hover,
+  .hamburger a:focus-visible {
     transform: translateY(-1px);
     color: #ffffff;
     border-color: rgba(160, 218, 255, 0.7);
@@ -100,7 +167,9 @@
   }
 
   .nav-links a:hover::after,
-  .nav-links a:focus-visible::after {
+  .nav-links a:focus-visible::after,
+  .hamburger a:hover::after,
+  .hamburger a:focus-visible::after {
     opacity: 1;
   }
 
@@ -111,13 +180,46 @@
     }
 
     .nav-links {
-      /* justify-content: flex-start;
-      gap: 0.35rem;
-      padding: 0.35rem;
-      border-radius: 16px; */
       display: none;
     }
 
+    .hamburger-toggle {
+      display: flex;
+    }
+
+    .hamburger {
+      position: absolute;
+      top: calc(100% + 0.45rem);
+      left: 0;
+      right: 0;
+      padding: 0.45rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(122, 122, 122, 0.25) 0%,
+          rgba(70, 70, 70, 0.28) 100%
+        ),
+        rgba(9, 9, 9, 0.58);
+      box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px) saturate(130%);
+      -webkit-backdrop-filter: blur(8px) saturate(130%);
+    }
+
+    .hamburger.open {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .hamburger a {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .hamburger a,
     .nav-links a {
       font-size: 0.84rem;
       padding: 0.62rem 0.9rem;
@@ -134,3 +236,58 @@
     }
   }
 </style>
+
+<script>
+  const nav = document.querySelector(".site-nav");
+
+  if (nav) {
+    const button = nav.querySelector(
+      ".hamburger-toggle",
+    ) as HTMLButtonElement | null;
+    const menu = nav.querySelector(".hamburger") as HTMLUListElement | null;
+    const links = menu?.querySelectorAll("a") ?? [];
+
+    if (button && menu) {
+      const closeMenu = () => {
+        menu.hidden = true;
+        menu.classList.remove("open");
+        button.setAttribute("aria-expanded", "false");
+      };
+
+      const toggleMenu = () => {
+        const willOpen = menu.hasAttribute("hidden");
+        menu.hidden = !willOpen;
+        menu.classList.toggle("open", willOpen);
+        button.setAttribute("aria-expanded", String(willOpen));
+      };
+
+      button.addEventListener("click", toggleMenu);
+
+      links.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("click", (event) => {
+        if (window.innerWidth > 780) {
+          return;
+        }
+
+        if (event.target instanceof Node && !nav.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 780) {
+          closeMenu();
+        }
+      });
+    }
+  }
+</script>
