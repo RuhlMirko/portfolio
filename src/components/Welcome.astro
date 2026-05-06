@@ -200,12 +200,33 @@ import Cta from "../components/Cta.astro";
     .hero-cta a {
       width: 100%;
       padding-block: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: stretch;
     }
   }
 
   @media (max-width: 640px) {
+    h1 {
+      white-space: normal;
+      text-align: center;
+      letter-spacing: 0.08em;
+    }
+
+    h2 {
+      width: min(100%, max-content);
+      padding-inline: 1rem;
+    }
+
     .achievements {
       grid-template-columns: 1fr;
+      text-align: center;
+      p {
+        font-size: 5vw;
+      }
     }
   }
 

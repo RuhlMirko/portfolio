@@ -178,11 +178,6 @@ const othersLoop = [...others, ...others, ...others, ...others];
     align-items: center;
     gap: 0.65rem;
     flex-shrink: 0;
-    /* padding: 0.75rem 1.5rem; 
-     background: var(--aero-black);
-    border: 1px solid var(--faint-border);
-    box-shadow: 0 5px 5px rgb(24, 24, 24); 
-    border-radius: 15px; */
     color: white;
     font-weight: 500;
     white-space: nowrap;
@@ -190,7 +185,6 @@ const othersLoop = [...others, ...others, ...others, ...others];
     transition: 0.2s;
     font-size: 1.2rem;
     min-width: 120px;
-    /* margin-right: 1rem; */
   }
 
   .skill-item::after {
@@ -218,6 +212,12 @@ const othersLoop = [...others, ...others, ...others, ...others];
     height: 2.3rem;
     aspect-ratio: 1;
     flex-shrink: 0;
+  }
+
+  @media (max-width: 980px) {
+    .skill-item {
+      min-width: 92px;
+    }
   }
 
   @keyframes scroll {

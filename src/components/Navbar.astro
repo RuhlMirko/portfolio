@@ -35,9 +35,8 @@
   nav {
     position: fixed;
     top: 0.9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(960px, calc(100% - 1rem));
+    left: max(0.5rem, calc(50% - 480px));
+    right: max(0.5rem, calc(50% - 480px));
     z-index: 30;
     animation: reveal-nav 0.5s ease-out forwards;
   }
@@ -91,8 +90,8 @@
     display: none;
     align-items: center;
     justify-content: center;
-    width: 3.2rem;
-    height: 3rem;
+    width: 4.2rem;
+    height: 4rem;
     margin-left: auto;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -106,8 +105,8 @@
   }
 
   .hamburger-toggle svg {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 2.4rem;
+    aspect-ratio: 1;
     display: block;
   }
 
@@ -194,7 +193,8 @@
   @media (max-width: 780px) {
     nav {
       top: 0.6rem;
-      width: calc(100% - 0.5rem);
+      left: 0.25rem;
+      right: 0.25rem;
     }
 
     .nav-links {
@@ -247,10 +247,12 @@
 
   @keyframes reveal-nav {
     from {
-      transform: translate(-50%, -40px);
+      transform: translateY(-40px);
+      opacity: 0;
     }
     to {
-      transform: translate(-50%, 0);
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 </style>
