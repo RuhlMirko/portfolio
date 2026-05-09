@@ -23,13 +23,13 @@ const contactItems = [
 
   <div class="contact-shell">
     <div class="contact-copy">
+      <h3>Let's build something practical and polished.</h3>
       <p class="eyebrow">Open to freelance and full-time roles</p>
-      <h3>Let&apos;s build something practical and polished.</h3>
       <p class="lead">
         If you have a project in mind, need frontend support, or want to discuss
         a collaboration, I am happy to connect.
       </p>
-      <p>
+      <p class="ps-tag">
         The fastest way to reach me is by email. I usually reply within one
         business day.
       </p>
@@ -61,6 +61,18 @@ const contactItems = [
                 rel={item.href.startsWith("http") ? "noreferrer" : undefined}
               >
                 {item.value}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14 21 3" />
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                </svg>
               </a>
             </li>
           ))
@@ -103,12 +115,13 @@ const contactItems = [
   }
 
   .eyebrow {
+    width: 100%;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-block: 0.3rem;
     padding: 0.35rem 0.8rem;
     border: 1px solid rgba(190, 202, 217, 0.3);
     border-radius: 50px;
-    background: var(--aero-black);
+    background: var(--aero-green);
     color: #f3f7ff;
     font-family: "Jost", "Segoe UI", sans-serif;
     font-size: 0.88rem;
@@ -122,6 +135,9 @@ const contactItems = [
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     color: #f3f7ff;
     max-width: 24ch;
+    text-align: center;
+    text-wrap: pretty;
+    line-height: 1.2;
   }
 
   .lead {
@@ -130,6 +146,13 @@ const contactItems = [
     color: #f3f7ff;
     max-width: 42ch;
     margin-bottom: 0.85rem;
+  }
+
+  .ps-tag {
+    font-style: italic;
+    font-weight: 100;
+    margin: 0 auto;
+    width: fit-content;
   }
 
   .contact-copy p + p {
@@ -209,6 +232,12 @@ const contactItems = [
     color: rgba(236, 242, 250, 0.92);
     text-decoration: none;
     word-break: break-word;
+    svg {
+      height: 16px;
+      aspect-ratio: 1;
+      margin-left: 2px;
+      stroke: rgb(106, 180, 248);
+    }
   }
 
   .contact-panel a:hover,
