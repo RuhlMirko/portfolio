@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import profileImage from "../assets/pfp1.jpg";
+
 const highlights = [
   {
     value: "4+",
@@ -21,12 +24,25 @@ const highlights = [
   <div class="about-shell">
     <div class="about-copy">
       <p class="eyebrow">Full stack developer with a product mindset</p>
+
+      <header class="about-header">
+        <div class="profile-frame">
+          <Image
+            src={profileImage}
+            alt="Profile"
+            width={200}
+            height={200}
+            class="profile-picture"
+          />
+        </div>
+        <p>
+          I build web experiences that feel polished on the surface and stay
+          dependable underneath. My focus is turning ideas into usable products
+          with clean interfaces, solid structure, and room to grow.
+        </p>
+      </header>
+
       <p class="lead">
-        I build web experiences that feel polished on the surface and stay
-        dependable underneath. My focus is turning ideas into usable products
-        with clean interfaces, solid structure, and room to grow.
-      </p>
-      <p>
         I enjoy working across the stack, from crafting responsive frontend
         details to shaping backend logic that keeps things fast and
         maintainable. The goal is usually the same: reduce friction, make the
@@ -65,7 +81,7 @@ const highlights = [
 
 <style>
   .about {
-    padding-inline: clamp(0.75rem, 2vw, 1.25rem);
+    padding-inline: clamp(0.75rem, 1vw, 1rem);
   }
 
   .about-shell {
@@ -80,9 +96,7 @@ const highlights = [
     border: 1px solid rgb(68, 68, 68);
     border-radius: 20px;
     background: rgba(18, 18, 18, 0.92);
-    box-shadow:
-      0 14px 30px rgba(0, 0, 0, 0.28),
-      var(--inner-shadow);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
     overflow: hidden;
   }
 
@@ -96,13 +110,58 @@ const highlights = [
     padding: 0.35rem 0.8rem;
     border: 1px solid rgba(190, 202, 217, 0.3);
     border-radius: 50px;
-    background: var(--aero-black);
+    background: var(--aero-green);
     color: #f3f7ff;
     font-family: "Jost", "Segoe UI", sans-serif;
     font-size: 0.88rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     text-align: center;
+    width: 100%;
+  }
+
+  .about-header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background: var(--aero-black);
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+    font-family: "Jost";
+    text-wrap: pretty;
+  }
+
+  .profile-frame {
+    width: fit-content;
+    margin: 0;
+    padding: 0.7rem;
+    border-radius: 27%;
+    corner-shape: squircle;
+    border: 1px solid rgba(51, 55, 59, 0.72);
+    background:
+      var(--aero-black),
+      radial-gradient(
+        circle at 20% 18%,
+        rgba(130, 148, 165, 0.473),
+        rgba(255, 255, 255, 0)
+      );
+    box-shadow: inset 0 0 0 2px rgba(87, 144, 190, 0.28);
+  }
+
+  .profile-picture {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid rgba(198, 224, 248, 0.6);
+    background: linear-gradient(
+      160deg,
+      rgba(20, 30, 43, 0.94),
+      rgba(9, 14, 21, 1)
+    );
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+    overflow: hidden;
   }
 
   .lead {

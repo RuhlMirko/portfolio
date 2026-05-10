@@ -108,8 +108,17 @@ import Cta from "../components/Cta.astro";
     }
 
     .cta {
+      color: #000000;
+      font-weight: 900;
+      border-color: #838282;
+      font-family: "Jost";
+      letter-spacing: 1px;
+      text-shadow: 0 0 12px #fff;
+      &:hover {
+        color: #fff;
+      }
       &::before {
-        background: radial-gradient(rgb(0, 112, 216), rgb(0, 39, 168));
+        background: var(--aero-white);
       }
     }
   }

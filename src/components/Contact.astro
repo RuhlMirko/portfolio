@@ -103,9 +103,7 @@ const contactItems = [
     border: 1px solid rgb(68, 68, 68);
     border-radius: 20px;
     background: rgba(18, 18, 18, 0.92);
-    box-shadow:
-      0 14px 30px rgba(0, 0, 0, 0.28),
-      var(--inner-shadow);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
     overflow: hidden;
   }
 
@@ -189,7 +187,7 @@ const contactItems = [
   .contact-btn:hover,
   .contact-btn:focus-visible {
     transform: translateY(-1px);
-    border-color: rgba(160, 218, 255, 0.8);
+    border-color: rgba(221, 221, 221, 0.8);
     box-shadow: 0 8px 14px rgba(0, 0, 0, 0.28);
     outline: none;
   }
@@ -197,12 +195,12 @@ const contactItems = [
   .contact-panel {
     padding: 1rem;
     background:
-      linear-gradient(180deg, rgba(20, 43, 74, 0.82), rgba(18, 18, 18, 0.96)),
-      var(--aero-black);
+      linear-gradient(180deg, #134566d1, #071222d1), var(--aero-black);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.9rem;
+    border-color: #0868a8;
   }
 
   .contact-panel ul {
@@ -268,6 +266,7 @@ const contactItems = [
 
   .availability p {
     border-color: #4b4a4a;
+    text-align: center;
   }
 
   @media (max-width: 980px) {
