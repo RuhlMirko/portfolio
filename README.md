@@ -3,8 +3,9 @@
 This portfolio showcases my work, technical skills, and selected projects in a fast, modern, and responsive format. It is designed to serve as a central place where visitors can learn more about my background, explore featured work, and quickly access the most relevant parts of my experience.
 
 The site focuses on a frutiger aero presentation, smooth navigation, and a lightweight frontend architecture powered by Astro.
+[Live demo](https://ruhlmirko.github.io)
 
-- [Live demo](https://ruhlmirko.github.io)
+- [![Deploy to GitHub Pages](https://github.com/RuhlMirko/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/RuhlMirko/portfolio/actions/workflows/deploy.yml)
 
 ## Tech Stack
 
