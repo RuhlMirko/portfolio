@@ -9,6 +9,13 @@
       "repo": "https://github.com/RuhlMirko/comando99"
     },
     {
+      "title": "Component Library",
+      "thumbnail": "reactUI",
+      "description": "A reusable React component library showcasing best practices for component architecture, documentation, and modularity.\nDesigned to streamline development workflows with well-structured, accessible, and thoroughly documented UI components.",
+      "tech": ["react", "css", "vite"],
+      "repo": "https://github.com/RuhlMirko/scrimba-learning/tree/main/websites/componentsLibrary"
+    },
+    {
       "title": "Tenzies",
       "thumbnail": "tenzies",
       "description": "An interactive dice game built with React where players roll until all dice show the same number.\nImplements real-time timer functionality and persistent high score tracking using localStorage and React hooks.",
