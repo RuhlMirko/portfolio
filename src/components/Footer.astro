@@ -3,27 +3,54 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <h3>© Mirko Joel Ruhl - {currentYear}</h3>
-  <p>Made with Astro - <a href="">view code</a></p>
+  <div class="footer-inner">
+    <h3>© Mirko Joel Ruhl - {currentYear}</h3>
+    <p>
+      Made with Astro - <a
+        href="https://github.com/RuhlMirko/portfolio"
+        target="_blank"
+        rel="noreferrer">view code</a>
+    </p>
+  </div>
 </footer>
 
 <style>
   footer {
     width: 100%;
-    background: #121212;
-    margin-top: 1.5rem;
-    padding-bottom: 1rem;
+    background: rgba(10, 10, 10, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    margin-top: clamp(2rem, 5vw, 4rem);
+    padding: 1.5rem 1rem 2rem;
     text-align: center;
   }
+
+  .footer-inner {
+    width: min(1180px, calc(100% - 1rem));
+    margin: 0 auto;
+  }
+
   h3 {
     padding-top: 12px;
-    color: #9c9a9a;
-    font-weight: 500;
+    color: #b4bac3;
+    font-weight: 600;
     font-size: 1rem;
     font-family: "Nunito";
-    border-top: 1px solid var(--faint-border);
+    letter-spacing: 0.04em;
   }
+
+  p {
+    margin-top: 0.4rem;
+    color: #a8b0ba;
+  }
+
   a {
-    color: #818181;
+    color: #8fd3ff;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    text-decoration: underline;
+    outline: none;
   }
 </style>

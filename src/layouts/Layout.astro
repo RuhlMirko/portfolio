@@ -118,7 +118,9 @@ const image = `${url}/preview.png`;
     scroll-padding-top: 80px;
   }
   section {
-    margin-block: 8rem;
+    position: relative;
+    margin-block: 0;
+    padding-block: clamp(1rem, 2vw, 1.5rem);
   }
 
   hr {
@@ -127,20 +129,39 @@ const image = `${url}/preview.png`;
     height: 0;
     margin-bottom: 1rem;
   }
-  main {
-    max-width: 1080px;
+
+  .site-main {
+    width: min(100%, 1180px);
     margin: 0 auto;
+    padding-inline: 0.5rem;
+    padding-top: clamp(4rem, 8vw, 6rem);
+    display: block;
   }
+
+  .site-main > section {
+    width: min(100%, 1180px);
+    margin-inline: auto;
+  }
+
   body {
     color: var(--text-primary);
-    background:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
-      linear-gradient(to bottom, #2b2b2b, #121212);
-    background-size:
-      var(--grid-size) var(--grid-size),
-      var(--grid-size) var(--grid-size),
-      100% 100%;
+    background: linear-gradient(
+      to right,
+      #050505 0%,
+      #111111 42%,
+      #050505 100%
+    );
+    &::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+      background-size: 24px 24px;
+      mask-image: radial-gradient(circle at center, black 50%, transparent 98%);
+    }
     background-attachment: fixed;
     font-family:
       "Nunito",
@@ -159,9 +180,12 @@ const image = `${url}/preview.png`;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  section {
+    margin-bottom: 5rem;
+  }
   @media (max-width: 1200px) {
     body {
-      padding-inline: 4%;
+      padding-inline: 0;
     }
   }
   h1,

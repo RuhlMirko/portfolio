@@ -35,8 +35,9 @@
   nav {
     position: fixed;
     top: 0.9rem;
-    left: max(0.5rem, calc(50% - 480px));
-    right: max(0.5rem, calc(50% - 480px));
+    left: 50%;
+    width: min(100% - 1rem, 1100px);
+    transform: translateX(-50%);
     z-index: 30;
     animation: reveal-nav 0.5s ease-out forwards;
   }
@@ -247,11 +248,11 @@
 
   @keyframes reveal-nav {
     from {
-      transform: translateY(-40px);
+      transform: translate(-50%, -40px);
       opacity: 0;
     }
     to {
-      transform: translateY(0);
+      transform: translate(-50%, 0);
       opacity: 1;
     }
   }
