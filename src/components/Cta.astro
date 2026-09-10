@@ -72,13 +72,11 @@
 
 <style>
   .cta {
-    align-self: center;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-self: start;
+    justify-content: flex-start;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2rem;
     align-items: stretch;
     animation: load-in 1200ms ease-in;
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -86,15 +84,14 @@
     border-radius: 18px;
     background: rgba(18, 18, 18, 0.72);
     width: 100%;
-    min-height: 260px;
+    height: 100%;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.42);
 
     .cta-info {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 0.6rem;
-      flex: 1;
+      justify-content: flex-start;
+      gap: 2rem;
     }
 
     h3 {
@@ -183,7 +180,8 @@
   .social-links {
     display: flex;
     gap: 0.8rem;
-    margin-top: 0.35rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .social-link {
